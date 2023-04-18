@@ -1,0 +1,142 @@
+
+$(function(){
+	var ua =detectUA();
+	console.log('ua',ua);
+	
+	if ( ua ==='smartphone' ||ua ==='tablet' ) {
+		$(document).on('click','.copyurl',function(){
+			console.log('copy 1');
+			var copyText = document.querySelector('.thisUrl');
+			console.log(copyText);
+			var range = document.createRange();
+			range.selectNode(copyText);
+			
+			window.getSelection().removeAllRanges();
+			window.getSelection().addRange(range);
+			try {
+				// テキストを選択したらクリップボードにコピーする
+				var successful = document.execCommand('copy');
+				var msg = successful ? 'successful' : 'unsuccessful';
+				console.log('Copy command was ' + msg);
+				msgCopySuccess();
+			} catch(err) {
+				console.log('Oops, unable to copy1');
+			}
+			// 選択状態を解除する
+		//	window.getSelection().removeAllRanges();
+		});
+		
+		$(document).on('click','.copyCode',function(){
+			console.log('copy 1');
+			// var copyText = document.querySelector('.thisUrl');
+			var voiceId = $(this).data('vid');
+			var voiceText = $(this).data('vtxt');
+			var withoutLineBreaks = voiceText.replace(/[\r\n]/gm, '');
+			var codeString = '<iframe src="https://www.voistock.com/ja/embedded/?vid='+voiceId+'" title="'+withoutLineBreaks+'" width="600" height="260" frameBorder="0"></iframe>';
+			$(".thisCode").text(codeString);
+			console.log('copy 1');
+			var copyText = document.querySelector('.thisCode');
+			console.log(copyText);
+			var range = document.createRange();
+			range.selectNode(copyText);
+			
+			window.getSelection().removeAllRanges();
+			window.getSelection().addRange(range);
+			try {
+				// テキストを選択したらクリップボードにコピーする
+				var successful = document.execCommand('copy');
+				var msg = successful ? 'successful' : 'unsuccessful';
+				console.log('Copy command was ' + msg);
+				msgCodeCopySuccess();
+			} catch(err) {
+				console.log('Oops, unable to copy1');
+			}
+			// 選択状態を解除する
+		//	window.getSelection().removeAllRanges();
+		});
+	} else {
+		$(document).on('click','.copyurl',function(){
+			console.log('copy 2');
+			var copyText = document.querySelector('.thisUrl');
+			console.log(copyText);
+			var range = document.createRange();
+			range.selectNode(copyText);
+			window.getSelection().removeAllRanges();
+			window.getSelection().addRange(range);
+			try {
+				// テキストを選択したらクリップボードにコピーする
+				var successful = document.execCommand('copy');
+				var msg = successful ? 'successful' : 'unsuccessful';
+				console.log('Copy command was ' + msg);
+				msgCopySuccess();
+			} catch(err) {
+				console.log('Oops, unable to copy2');
+			}
+			// 選択状態を解除する
+			window.getSelection().removeAllRanges();
+		});
+
+		$(document).on('click','.copyCode',function(){
+			console.log('copy 1');
+			// var copyText = document.querySelector('.thisUrl');
+			var voiceId = $(this).data('vid');
+			var voiceText = $(this).data('vtxt');
+			var withoutLineBreaks = voiceText.replace(/[\r\n]/gm, '');
+			var codeString = '<iframe src="https://www.voistock.com/ja/embedded/?vid='+voiceId+'" title="'+withoutLineBreaks+'" width="600" height="260" frameBorder="0"></iframe>';
+			$(".thisCode").text(codeString);
+			console.log('copy 1');
+			var copyText = document.querySelector('.thisCode');
+			console.log(copyText);
+			var range = document.createRange();
+			range.selectNode(copyText);
+			
+			window.getSelection().removeAllRanges();
+			window.getSelection().addRange(range);
+			try {
+				// テキストを選択したらクリップボードにコピーする
+				var successful = document.execCommand('copy');
+				var msg = successful ? 'successful' : 'unsuccessful';
+				console.log('Copy command was ' + msg);
+				msgCodeCopySuccess();
+			} catch(err) {
+				console.log('Oops, unable to copy1');
+			}
+		});
+		
+	}
+});
+
+
+
+function msgCopySuccess() {
+	new PNotify({
+		title: 'URLコピー',
+		text: 'URLをクリップボードにコピーしました',
+		type: 'success',
+		styling: 'bootstrap3',
+		delay: 1200
+	});
+}	
+
+function detectUA() {
+	var ua = navigator.userAgent;
+	if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+		return 'smartphone';
+	} else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+		return 'tablet';
+	} else {
+		return 'pc';
+	}	
+}
+
+
+
+function msgCodeCopySuccess() {
+	new PNotify({
+		title: '埋め込みコード',
+		text: '埋め込みコードをクリップボードにコピーしました',
+		type: 'success',
+		styling: 'bootstrap3',
+		delay: 1200
+	});
+}

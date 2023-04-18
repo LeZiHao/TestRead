@@ -1,0 +1,78 @@
+$(function(){
+	showIconDescription();
+});
+
+function showIconDescription() {
+	
+	
+	if ($.cookie('lang')==="en") {
+		l_eventVoiceIcon = "event voice";
+		l_voiceDistributeIcon = "event voice";
+		l_headphones = "ASMR voice";
+		l_googlespearch = "Google Speech Recognition";
+		l_googletranslate = "Translated by Google";
+	} else {
+		l_eventVoiceIcon = "イベントでコード配布されるボイスです";
+		l_voiceDistributeIcon = "イベントでコード配布されるボイスです";
+		l_headphones = "ASMRボイスです";
+		l_googlespearch = "Google音声認識";
+		l_googletranslate = "Google自動翻訳";
+	}
+	
+	shown=false;
+
+	$('.eventVoiceIcon').on('click',function(){
+		hideAllBalloon();
+		$(this).showBalloon();
+	}).showBalloon({
+		contents: l_eventVoiceIcon
+	});
+	$('.eventVoiceIcon').hideBalloon();
+
+
+	$('.voiceDistributeIcon').on('click',function(){
+		hideAllBalloon();
+		$(this).showBalloon();
+	}).showBalloon({
+		contents: l_voiceDistributeIcon
+	});
+	$('.voiceDistributeIcon').hideBalloon();
+
+
+	$('.fa-headphones-alt').on('click',function(){
+		hideAllBalloon();
+		$(this).showBalloon();
+	}).showBalloon({
+		contents: l_headphones
+	});
+	$('.fa-headphones-alt').hideBalloon();
+	
+	
+	
+	$('.googlespearch').on('click',function(){
+		hideAllBalloon();
+		$(this).showBalloon();
+	}).showBalloon({
+		contents: l_googlespearch
+	});
+	$('.googlespearch').hideBalloon();
+	
+
+	$('.googletranslate').on('click',function(){
+		hideAllBalloon();
+		$(this).showBalloon();
+	}).showBalloon({
+		contents: l_googletranslate
+	});
+	$('.googletranslate').hideBalloon();
+
+}
+
+
+function hideAllBalloon() {
+	$('.eventVoiceIcon').hideBalloon();
+	$('.voiceDistributeIcon').hideBalloon();
+	$('.fa-headphones-alt').hideBalloon();
+	$('.googlespearch').hideBalloon();
+	$('.googletranslate').hideBalloon();
+}

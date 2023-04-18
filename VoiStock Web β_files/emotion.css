@@ -1,0 +1,191 @@
+.emotionNotSelected{
+    background: linear-gradient(30deg, gray, gray);
+}
+
+.emotionNotSelected::before{
+    border-left: 12px solid gray;
+    border-top: 12px solid gray;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+.says.emotionNotSelected::after{
+    border-right: 18px solid gray;
+}
+
+/*******************************************************/
+
+
+.happyVoice{
+    background: linear-gradient(30deg, #FF4500, #FFA500);
+}
+
+.happyVoice::before{
+    border-left: 12px solid #FF4500;
+    border-top: 12px solid #FF4500;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+.says.happyVoice::after{
+    border-right: 18px solid #FF6300;
+}
+
+
+
+.sadVoice{
+    background: linear-gradient(30deg, blue, skyblue);
+}
+.sadVoice::before{
+     border-left: 12px solid blue;
+    border-top: 12px solid blue;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+.says.sadVoice::after{
+    border-right: 18px solid #2A3FF9;
+}
+
+
+
+.cuteVoice{
+    background: linear-gradient(30deg, #FF00FF, #FF69B4);
+}
+.cuteVoice::before{
+     border-left: 12px solid #FF00FF;
+    border-top: 12px solid #FF00FF;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+.says.cuteVoice::after{
+    border-right: 18px solid #FF16EF;
+}
+
+
+
+.peacefulVoice{
+    background: linear-gradient(30deg, 	#228B22, #32CD32);
+}
+.peacefulVoice::before{
+     border-left: 12px solid #228B22;
+    border-top: 12px solid #228B22;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+.says.peacefulVoice::after{
+    border-right: 18px solid #279E27;
+}
+
+
+
+.angryVoice{
+    background: linear-gradient(30deg, #cc0000, #ff0000);
+}
+.angryVoice::before{
+     border-left: 12px solid #cc0000;
+    border-top: 12px solid #cc0000;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+.says.angryVoice::after{
+    border-right: 18px solid #db0000;
+}
+
+.sexyVoice{
+    background: linear-gradient(30deg, #4B0082, #b300b3);
+}
+.sexyVoice::before{
+     border-left: 12px solid #4B0082;
+    border-top: 12px solid #4B0082;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+.says.sexyVoice::after{
+    border-right: 18px solid #730095;
+}
+
+
+
+.surpriseVoice{
+    background: linear-gradient(30deg, #ffd900, #e6e600);
+}
+.surpriseVoice::before{
+     border-left: 12px solid #ffd900;
+    border-top: 12px solid #ffd900;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+.says.surpriseVoice::after{
+    border-right: 18px solid #F6DF00;
+}
+
+
+.negativeVoice{
+    background: linear-gradient(30deg, black, gray);
+}
+
+.negativeVoice::before{
+    border-left: 12px solid black;
+    border-top: 12px solid black;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+.says.negativeVoice::after{
+    border-right: 18px solid black;
+}
+
+
+
+.noEmotionVoice{
+    background: linear-gradient(30deg, #596673, #66b3ff);
+}
+.noEmotionVoice::before{
+    border-left: 12px solid #596673;
+    border-top: 12px solid #596673;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+.says.noEmotionVoice::after{
+    border-right: 18px solid #5B738B;
+}
+
+
+
+.text-happyVoice{
+    color: #FF4500;
+}
+
+.text-sadVoice{
+    color: blue;
+}
+
+.text-cuteVoice{
+    color: #FF00FF;
+}
+
+.text-peacefulVoice{
+    color: #228B22;
+}
+
+
+.text-angryVoice{
+    color: #cc0000;
+}
+
+.text-sexyVoice{
+    color: #4B0082;
+}
+
+.text-surpriseVoice{
+    color: #ffd900;
+}
+
+
+
+.text-negativeVoice{
+    color: black;
+}
+
+
+.text-noEmotionVoice{
+    color: #596673;
+}
+

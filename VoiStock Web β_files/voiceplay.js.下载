@@ -1,0 +1,213 @@
+var playing_id="";
+var playing_obj="";
+var playvoice={};
+
+$(function() {
+	playbutton();
+	
+});
+
+
+function playbutton() {
+	
+	$(document).off('click','.voiceplay');
+	$(document).on('click','.voiceplay',function(e) {
+		if ($(this).find('.vicon').hasClass('fa-play-circle')) {
+			// 一度全部再生を止める
+			stopAllVoicePlay();
+//			console.log('throw playstart');
+
+			$(document).trigger('playstart');
+			inPlay($(this).find('.vicon'));
+			// ここで音声再生
+			voicePlay($(this).find('.vicon') , $(this).data('vid') );
+			// 再生ログ
+			playLog($(this).data('vid') , uid);
+			
+		} else {
+			outPlay($(this).find('.vicon'));
+			// ここで音声停止
+			voiceStop($(this).find('.vicon'), $(this).data('vid'));
+		}
+	});
+	
+}
+
+function inPlay(obj) {
+	$(obj).removeClass('fa-play-circle');
+	$(obj).addClass('fa-pause-circle');
+	
+}
+
+function outPlay(obj) {
+	$(obj).removeClass('fa-pause-circle');
+	$(obj).addClass('fa-play-circle');
+	stopMarquee(obj);
+}
+
+function voicePlay(obj,id , playpos) {
+//	console.log('id='+id);
+//	console.log('pos='+playpos);
+
+	stopAllVoicePlay();
+
+	if (playpos!==undefined) {
+		var idname = '.plist'+playpos;
+	}else {
+		var idname = '#voice'+id;
+	}
+	
+	
+	if( playing_id.length>0 ) {
+		outPlay(playing_obj);
+		voiceStop(playing_obj,playing_id,voiceStop);
+	}
+
+	playing_obj=obj;
+	playing_id=idname;
+	
+	if ( !playvoice[idname] ) {
+		
+		var skey = createSkey();
+		var scode= createScode(skey);
+
+		var nowattr = $(idname).attr("src");
+		var newattr = nowattr + "&skey="+ skey + "&scode="+scode+ "&uid="+uid+ "&from=website";
+		$(idname).attr("src",newattr);
+		
+		
+		playvoice[idname]= new Howl({
+			src :[newattr],
+			format: ['mp3'],
+			autoplay: false,
+			loop: false,
+			onend: function() {
+				$(document).trigger('voiceplayfin');
+				outPlay(obj);
+				voiceStop(obj,id,playpos);
+			},
+			onload: function() {
+				inPlay(obj);
+				this.play();
+				console.log('onload play');
+			}
+		});
+	} else {
+		inPlay(obj);
+		playvoice[idname].play();
+		console.log('loaded chache play');
+	}
+	
+	
+	showMarquee(obj);
+}
+
+
+
+function voiceStop(obj,id , playpos) {
+//	console.log('voiceStop='+id);
+//	console.log(playpos);
+	if (playpos!==undefined) {
+		var idname = '.plist'+playpos;
+	}else {
+		var idname = '#voice'+id;
+	}
+/*	
+	console.log(playvoice);
+	console.log("idname=" + idname);
+	console.log(playvoice[idname]);
+	console.log(playvoice[idname].playing());
+*/
+	if(playvoice[idname]!==undefined && playvoice[idname].playing() === true ) {
+		playvoice[idname].stop();
+	}
+	playing_id="";
+	playing_obj="";
+}
+
+function playLog(vid) {
+	var skey = createSkey();
+   var scode= createScode(skey);
+	
+	var postdata  = {"uid":uid ,"vid":vid ,"from":'voistockweb' , "skey":skey,"scode":scode};
+	var apiurl    = apidom + '/voice/setPlayLog.php'
+	$.ajax({
+		type: "POST",
+		url:  apiurl,
+		data: postdata,
+		dataType: "json",
+		success: function(data) {
+		},
+		error: function(err) {
+		  console.log(JSON.stringify(err));
+		}
+	});
+	
+	
+}
+
+
+function showFullText(obj) {
+	var nowtxt = obj.parents('.media').find('.ptext').text();
+	var fulltxt = obj.parents('.media').find('.pfulltext').text();
+	
+
+	if (nowtxt === fulltxt) {
+//		console.log('do not move');
+	} else {
+//		console.log('have to move');
+		
+		obj.parents('.media').find('.ptext').hide();
+		obj.parents('.media').find('.pfulltext').show();
+		obj.parents('.media').find('.pfulltext').marquee('mq');
+
+	}
+}
+
+
+function showMarquee(obj) {
+	
+		var $element = obj.parents('.voicePostContents').find('.textbody');
+		var $c = $element.clone().css({display: 'inline', width: 'auto', visibility: 'hidden'}).appendTo('body');
+		var $cw =$c.width() +14;
+		var $ew = $element.width();
+		obj.parents('.voicePostContents').find('.mq').width($ew);
+		if( $cw >= $ew ) {
+			obj.parents('.voicePostContents').find('.textbody').hide();
+			obj.parents('.voicePostContents').find('.mq').marquee('mq');
+			obj.parents('.voicePostContents').find('.mq').show();
+		}
+		$c.remove();
+}
+
+function stopMarquee(obj) {
+	var txt = obj.parents('.voicePostContents').find('.textbody').text();
+	obj.parents('.voicePostContents').find('.textbody').show();
+	obj.parents('.voicePostContents').find('.mq').hide();
+	obj.parents('.voicePostContents').find('.mq').remove();
+	obj.parents('.voicePostContents').find('.textbody').after("<p class='mq'>"+txt+"</p>");
+	
+}
+
+
+function stopAllVoicePlay() {
+	
+	for (var key in playvoice) {
+	  playvoice[key].stop();
+	}
+
+	$('.playicon').each(function(){
+//		console.log(this);
+		
+		if ($(this).find('.vicon').hasClass('fa-pause-circle')) {
+//			$(this).click();
+			var obj = $(this).find('.vicon');
+			var id= obj.parent().data('vid');
+			var pos = obj.parents('.playlist-piece').data('vsort');
+//			console.log('stop all play');
+			outPlay(obj);
+			voiceStop(obj , id , pos);
+		}
+	});
+	
+}

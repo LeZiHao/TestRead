@@ -1,0 +1,87 @@
+
+$(function(){
+	$(document).on('click','.menu-stockadd',function() {
+		$("#changeStockModal").modal('show');
+	});
+	
+	$(document).on('click','.stockadd',function() {
+		$("#changeStockModal").modal('hide');
+		$("#addStockModal").modal('show');
+	});
+	
+	
+	$(document).on('click','.add-stock',function() {
+		$(this).prop('disabled', true);
+		$('.add-stock-form').submit();
+	});
+	
+	
+	$("#changeStockModal").on('show.bs.modal', function(e) {
+		console.log('getStockList');
+		var land_dir = $.cookie('lang');
+		var sess_url    = '/'+land_dir+'/stockadmin/stocklist.php';
+		var postdata =[];
+		$.ajax({
+			type: "POST",
+			url:  sess_url,
+			data: postdata,
+			dataType: "json",
+			xhrFields: {
+				withCredentials: true
+			},
+			success: function(data) {
+				console.log(data);
+				
+				if ( data.result &&  data.result==='他のストックはありません') {
+					$('#stock-list').html('<tr><td>他のストックはありません</td></tr>');
+				} else {
+					$("#stock-list").empty();
+					$('#stock_list_tmpl').tmpl(data).appendTo("#stock-list");
+//					$(document).off('click','.stockChange');
+//					$(document).on('click','.stockChange',function(){
+//						stockchange($(this));
+//					});
+				}
+				
+			},
+			error: function(err) {
+			  console.log(JSON.stringify(err));
+			}
+		});
+	});
+	
+});
+
+function stockchange(elem) {
+	var uid= elem.data('uid');
+	console.log(uid);
+	
+
+	var land_dir = $.cookie('lang');
+	var sess_url    = '/'+land_dir+'/stockadmin/stocklist.php';
+	var postdata ={'uid':uid};
+	$.ajax({
+		type: "POST",
+		url:  sess_url,
+		data: postdata,
+		dataType: "json",
+		xhrFields: {
+			withCredentials: true
+		},
+		success: function(data) {
+
+			console.log(data);
+			if ( data.url  && data.url !== 'mail') {	
+				window.location.href=data.url;
+			} else if ( data.url  && data.url === 'mail'){
+				
+			}
+		},
+		error: function(err) {
+		  console.log(JSON.stringify(err));
+			console.log(err);
+		}
+	});
+	
+	
+}

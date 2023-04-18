@@ -1,0 +1,120 @@
+$(function(){
+	
+	
+	translateStatusSet();
+	translateStatus();
+	translateLangCheck();
+	
+	$('.translate-switch').on('click',function(event){
+		console.log('translate-switch change');
+		event.stopPropagation();
+		translateStatus();
+		
+		if ($('.translate-switch').prop("checked") === false) {
+			reloadpage();
+		}
+		
+	});
+	
+	$('.voicetext-switch').on('click',function(event){
+		event.stopPropagation();
+	});
+
+});
+
+
+function translateStatus() {
+	if ( $('.translate-switch').prop("checked") === true) {
+		$('.translate-status').text('ON ');
+		$.cookie('texttranslate', 'on', { expires: 365 , path: '/', domain: '.voistock.com' });
+		
+		
+		if (pagelang==="ja") {
+			$('.dropdown-langmenu').append('<li class="trans-lang trans-lang-org"><a><span class="checkmark checkmark-org"></span> オリジナル</a></li><li class="trans-lang trans-lang-ja"><a><span class="checkmark checkmark-ja"></span> 日本語</a></li><li class="trans-lang trans-lang-en"><a><span class="checkmark checkmark-en"></span> English</a></li>');
+		} else {
+			$('.dropdown-langmenu').append('<li class="trans-lang trans-lang-org"><a><span class="checkmark checkmark-org"></span> Original</a></li><li class="trans-lang trans-lang-ja"><a><span class="checkmark checkmark-ja"></span> 日本語</a></li><li class="trans-lang trans-lang-en"><a><span class="checkmark checkmark-en"></span> English</a></li>');
+		}
+
+		if (  typeof $.cookie('translate-status') === "undefined" ) {
+			$('.checkmark-org').addClass('fas');
+			$('.checkmark-org').addClass('fa-check');
+			$.cookie('translate-status', 'original', { expires: 365 , path: '/', domain: '.voistock.com' });
+		}
+		
+		
+		
+		$('.trans-lang-org').on('click',function(){
+			console.log('trans-lang-org');
+			allcheckoff();
+			$('.checkmark-org').addClass('fas');
+			$('.checkmark-org').addClass('fa-check');
+			$.cookie('translate-status', 'original', { expires: 365 , path: '/', domain: '.voistock.com' });
+			reloadpage();
+		});
+
+		$('.trans-lang-ja').on('click',function(){
+			console.log('trans-lang-ja');
+			allcheckoff();
+			$('.checkmark-ja').addClass('fas');
+			$('.checkmark-ja').addClass('fa-check');
+			$.cookie('translate-status', 'ja', { expires: 365 , path: '/', domain: '.voistock.com' });
+			reloadpage();
+		});
+
+		$('.trans-lang-en').on('click',function(){
+			console.log('trans-lang-en');
+			allcheckoff();
+			$('.checkmark-en').addClass('fas');
+			$('.checkmark-en').addClass('fa-check');
+			$.cookie('translate-status', 'en', { expires: 365 , path: '/', domain: '.voistock.com' });
+			reloadpage();
+		});
+		
+		
+		
+		
+	} else {
+		$('.translate-status').text('OFF');
+		$('.trans-lang').remove();
+		
+		$.cookie('texttranslate', 'off', { expires: 365 , path: '/', domain: '.voistock.com' });
+		$.removeCookie('translate-status',{path: '/', domain: '.voistock.com' });
+	}
+}
+
+function allcheckoff() {
+	$('.checkmark').each(function(v){
+		$(this).removeClass('fas');
+		$(this).removeClass('fa-check');
+	});
+}
+
+function translateStatusSet() {
+	if ( $.cookie('texttranslate') ==="on" ) {
+		$('.translate-switch').click();		
+		console.log($.cookie('translate-status'));
+		
+		
+	}
+	else {
+		$('.translate-switch').prop("checked",false);
+	}
+}
+
+function translateLangCheck() {
+	if ($.cookie('translate-status') === "original") {
+		$('.checkmark-org').addClass('fas');
+		$('.checkmark-org').addClass('fa-check');
+	} else if ($.cookie('translate-status') === "ja") {
+		$('.checkmark-ja').addClass('fas');
+		$('.checkmark-ja').addClass('fa-check');
+	} else if ($.cookie('translate-status') === "en") {
+		$('.checkmark-en').addClass('fas');
+		$('.checkmark-en').addClass('fa-check');
+	}
+}
+
+
+function reloadpage() {
+	location.reload();
+}

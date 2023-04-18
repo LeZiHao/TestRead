@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://www.voistock.com/en/ -->
+<html prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#" class=" "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Meta, title, CSS, favicons, etc. -->
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:type" content="website">
+<meta name="description" content="Voiceで遊ぼう!Playlistsを作ったり、あなたVoiceをデータベースに追加してシェアすることもできるよ!たくさんの声を集めたVoiceデータベースのVoiStockでは声を使った新しい遊び方を提案。">
+<meta name="keywords" content="Voice,声,Voice Actor,Anime,Stock,Playlists,VoiStock,VoiStamp,Voiceデータベース,VoiStock,Games,アイドル,キャラ,録音,Animeキャラ,音声,Anime名言,中二病,まとめ,anime,quotes,japanese,phrases,CV,character,voice,playlist,actress,actor,words,">
+<meta name="author" content="VoiStock">
+<meta name="copyright" content="VoiStock">
+<meta property="og:site_name" content="VoiStock">
+<meta property="og:title" content="VoiStock β">
+<meta property="og:description" content="Voiceで遊ぼう!Playlistsを作ったり、あなたVoiceをデータベースに追加してシェアすることもできるよ!たくさんの声を集めたVoiceデータベースのVoiStockでは声を使った新しい遊び方を提案。">
+<meta property="og:url" content="https://www.voistock.com/en/">
+<meta property="og:image" content="https://www.voistock.com/en/images/logo-sns.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="fb:app_id" content="177623579685517">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@VoiStockPteLtd">
+    <title>VoiStock Web β</title>
+
+    <!-- Bootstrap -->
+    <link href="./VoiStock Web β_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+	<link href="./VoiStock Web β_files/all.min.css" rel="stylesheet">
+	<link href="./VoiStock Web β_files/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="./VoiStock Web β_files/nprogress.css" rel="stylesheet">
+	<!-- PNotify -->
+	<link href="./VoiStock Web β_files/pnotify.css" rel="stylesheet">
+	<link href="./VoiStock Web β_files/pnotify.buttons.css" rel="stylesheet">
+	<link href="./VoiStock Web β_files/pnotify.nonblock.css" rel="stylesheet">	
+	
+    <!-- iCheck -->
+    <link href="./VoiStock Web β_files/green.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="./VoiStock Web β_files/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="./VoiStock Web β_files/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="./VoiStock Web β_files/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="./VoiStock Web β_files/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="./VoiStock Web β_files/scroller.bootstrap.min.css" rel="stylesheet">
+    <link href="./VoiStock Web β_files/switchery.min.css" rel="stylesheet">
+
+    <!-- emotion -->
+    <link href="./VoiStock Web β_files/emotion.css" rel="stylesheet">
+	
+    <!-- Custom Theme Style -->
+    <link href="./VoiStock Web β_files/custom.css" rel="stylesheet">
+    <link href="./VoiStock Web β_files/all.css" rel="stylesheet">
+	
+<link href="./VoiStock Web β_files/slick.css" rel="stylesheet">
+<link href="./VoiStock Web β_files/slick-theme.css" rel="stylesheet">
+<link href="./VoiStock Web β_files/top.css" rel="stylesheet">
+<link href="./VoiStock Web β_files/emotion(1).css" rel="stylesheet">
+	
+  <meta http-equiv="origin-trial" content="A0VQgOQvA+kwCj319NCwgf8+syUgEQ8/LLpB8RxxlRC3AkJ9xx8IAvVuQ/dcwy0ok7sGKufLLu6WhsXbQR9/UwwAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6kRo9zXJhOvsR4D/VeZ9CiApPAxnOGzBkW88d8eIt9ex2oOzlX+AoUk/BS50Y9Ysy2jwyHR49Mb7XwP+l9yygIAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A3mbHZoS4VJtJ8j1aE8+Z9vaGf/oMV1eTNIWMrvGqWgNnOmvaxnRGliqKIZU2eiTzCj5Qpz8B1/UTTLuony5bAAAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><link rel="preload" href="./VoiStock Web β_files/f(4).txt" as="script"><script type="text/javascript" async="" src="./VoiStock Web β_files/analytics.js.下载"></script><script type="text/javascript" async="" src="./VoiStock Web β_files/js"></script><script type="text/javascript" src="./VoiStock Web β_files/f(4).txt"></script></head>
+  <body class="nav-sm">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+				<a href="https://www.voistock.com/en/" class="site_title"><img src="./VoiStock Web β_files/logomark.png" width="45px"> <span>VoiStock β</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+			            <!-- /menu profile quick info -->
+
+            <br>            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section active">
+                <h3>Functions</h3>
+                <ul class="nav side-menu" style="">
+                  <li class="current-page"><a href="https://www.voistock.com/en/"><i class="fa fa-asterisk"></i> Top Page </a></li>
+                  <li><a><i class="fas fa-upload"></i> Upload Voice <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" style="none">
+                      <li><a href="https://www.voistock.com/en/upload/index.php">Upload in a bunch</a></li>
+                    </ul>
+				  </li>
+                  <li><a><i class="fa fa-microphone"></i> Voice List <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" style="none">
+                      <li><a href="https://www.voistock.com/en/voicelist/">Public Voice List</a></li>
+                      <li><a href="https://www.voistock.com/en/voicelist/myvoice.php">Your Uploads</a></li>
+                      <li><a href="https://www.voistock.com/en/voicelist/favvoice.php">Favorite Voice List</a></li>
+                      <li><a href="https://www.voistock.com/en/voicelist/myplayhistory.php">Play history</a></li>
+                      <li><a href="https://www.voistock.com/en/voicelist/eventvoice.php">Event Voice List </a></li>
+                      <li><a href="https://www.voistock.com/en/voicelist/unlocklist.php">Unlocked Voices</a></li>
+					  
+					  
+                    </ul>
+                  </li>
+				  
+                  <li><a><i class="fa fa-list"></i> Playlists <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" style="none">
+                      <li><a href="https://www.voistock.com/en/playlist/search.php">Search for Playlists</a></li>
+                      <li><a href="https://www.voistock.com/en/playlist/">My Playlists</a></li>
+                      <li><a href="https://www.voistock.com/en/playlist/favorite.php">Favorite Playlists</a></li>
+                      <li><a href="https://www.voistock.com/en/voicelist/index.php">Add Voices to Playlists</a></li>
+                    </ul>
+                  </li>
+					  
+					  
+                  <li><a><i class="fa fa-comment-o"></i> Stock <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" style="none">
+                      <li><a href="https://www.voistock.com/en/stocksearch/">Search for Stocks</a></li>
+                      <li><a href="https://www.voistock.com/en/userprof/">Stock settings</a></li>
+                      <li><a class="menu-stockadd">Stock entry/Change</a></li>
+                    </ul>
+                  </li>
+				  
+                  <li><a href="https://www.voistock.com/en/code/"><i class="fa fa-edit"></i> Code Input </a></li>
+				  
+                </ul>
+              </div>
+              <div class="menu_section">
+                <h3>Etc.</h3>
+                <ul class="nav side-menu">
+                  <li><a href="https://www.voistock.com/en/information/"><i class="fa fa-info-circle"></i> Notice </a></li>
+                  <li><a><i class="fas fa-support"></i> Support <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" style="none">
+                      <li><!--<a href="/en/support/howto.php">--><a href="javascript:void(0)">User Guide <span class="label label-success pull-right">Coming Soon</span></a></li>
+                      <li><!--<a href="/en/support/faq.php">--><a href="javascript:void(0)">FAQ <span class="label label-success pull-right">Coming Soon</span></a></li>
+                      <li><a href="https://www.voistock.com/en/support/inquiry/">Contact us</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://www.voistock.com/en/privacy/"><i class="fas fa-flag"></i> Privacy Policy </a></li>
+                  <li><a href="https://www.voistock.com/en/terms/"><i class="fas fa-check"></i> Terms of Service </a></li>
+                  <li><a href="https://www.voistock.com/en/about/" target="_blank"><i class="fa fa-comment"></i> About us </a></li>
+                </ul>
+              </div>
+
+              <div class="menu_section">
+                <h3>Share</h3>
+                <ul class="nav side-menu snsiconmenu">
+					<li class="text-center"><a href="javascript:window.open(&#39;https://www.facebook.com/sharer.php?u=&#39;+encodeURIComponent(location.href),&#39;sharewindow&#39;,&#39;width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!&#39;);"><button type="button" class="btn btn-default snsbtn" style="background: #0D65D3;"><i class="fab fa-facebook snsicon"></i></button></a></li>
+					
+					<li class="text-center"><a href="javascript:window.open(&#39;https://twitter.com/share?text=&#39;+encodeURIComponent(document.title)+&#39;&amp;url=&#39;+encodeURIComponent(location.href),&#39;sharewindow&#39;,&#39;width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!&#39;);"><button type="button" class="btn btn-default snsbtn" style="background: #1DA1F2;"><i class="fab fa-twitter snsicon"></i></button></a></li>
+					<li class="text-center"><a href="javascript:window.open(&#39;https://line.me/R/msg/text/?&#39;+encodeURIComponent(document.title)+&#39;%20&#39;+encodeURIComponent(location.href),&#39;sharewindow&#39;,&#39;width=550, height=520, personalbar=0, toolbar=0, scrollbars=1, resizable=!&#39;);"><button type="button" class="btn btn-default snsbtn" style="background: #00B900;"><img src="./VoiStock Web β_files/line-logo.png" class="line-icon-img snsicon"></button></a></li>
+					<li class="text-center"><a><button type="button" class="btn btn-default copyurl snsbtn" id=""><i class="far fa-copy snsicon"></i></button></a></li>
+                </ul>
+              </div>
+				
+				
+				
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="" href="https://www.voistock.com/en/logout" data-original-title="Logout">
+                <span class="fa fa-sign-out" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div><script src="./VoiStock Web β_files/f(5).txt"></script><script src="./VoiStock Web β_files/f(6).txt" id="google_shimpl"></script><script>
+	pagelang='en';
+</script>
+
+		<!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+				  
+                <li class="">
+                  <a href="javascript:;" class="langbox dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+					  <!--言語設定-->
+                                          言語設定
+                    <span class="fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-langmenu pull-right">
+                    <li><a href="https://www.voistock.com/ja/"> 日本語</a></li>
+                    <li><a href="https://www.voistock.com/en/"><i class="fas fa-check"></i> English</a></li>
+					<li class="divider"></li>
+                    <li class="voicetrans">
+						Voice info translate
+						<span class="pull-right voicetext-switch">
+							<label><span class="translate-status">OFF</span><input type="checkbox" class="js-switch translate-switch" data-switchery="true" style="display: none;"><span class="switchery switchery-default" style="box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; border-color: rgb(223, 223, 223); background-color: rgb(255, 255, 255); transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s;"><small style="left: 0px; transition: background-color 0.4s ease 0s, left 0.2s ease 0s;"></small></span></label>
+						</span>
+					</li>
+                  </ul>					
+					
+                </li>
+
+				
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+					  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/user_icon.png" alt="" id="upperImageIcon" style="background-image: url(&quot;/img/user_icon.png&quot;); background-position: center center; background-size: cover; opacity: 1;"><span class="profNickname">Tabeiru</span>
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="https://www.voistock.com/en/userprof/?uk=NEG-S2X-2U6"> Stock settings</a></li>
+                    <li class="menu-stockadd"><a>Stock entry/Change</a></li>
+                    <li><a href="https://www.voistock.com/en/logout"><i class="fa fa-sign-out pull-right"></i> Logout</a></li>
+                  </ul>
+                </li>
+				
+                <li class="">
+                  <div class="input-group top_search">
+                    <input type="text" class="form-control menusearch-word" placeholder="Search for Voices...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default menusearch" type="button">Go!</button>
+                    </span>
+                  </div>
+				</li>
+				
+                <li class="">
+                  <div class="input-group upload-icon-area">
+					  <a href="https://www.voistock.com/en/upload/"><img src="./VoiStock Web β_files/stock_en.png" class="img-responsive upload-icon"></a>
+				  </div>
+				</li>
+								
+				
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+		
+<!-- stock切り替えモーダル -->
+<div class="modal fade" id="changeStockModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-quote">Stock Add/Change</h4>
+			</div>
+	        <div class="modal-body">
+				<form id="quote-form">
+				<span id="quote-body-area">
+					<p>Sign up new Stock</p>
+					
+					<div class="stockadd"><button type="button" class="btn btn-warning">Sign up new Stock</button></div>
+					<hr>
+					<p>Change Stock</p>
+					<table id="stock-list"></table>
+				</span>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- stock追加モーダル -->
+<div class="modal fade" id="addStockModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-quote">Stock追加</h4>
+			</div>
+	        <div class="modal-body">
+				<span id="quote-body-area">
+					<p>Stockを追加します。Stock名を入力してください</p>
+					<form method="post" action="https://www.voistock.com/en/stockadmin/add.php" class="add-stock-form">
+						<div>
+							<p><input type="text" name="stockname" class="add-stockname" value=""></p>
+						</div>
+						<button type="button" class="btn btn-info add-stock">追加する</button>
+					</form>
+					
+					
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script id="stock_list_tmpl" type="text/x-jquery-tmpl">
+	<tr>
+		   <td class="stock_usericon"><img src="${userIcon}" ></td>
+		   <td class="stock_usernickname">${userNickname}</td>
+		   <td class="stock_changebutton"><form method="post" action='/en/stockadmin/change.php'><button type='submit' class='btn btn-info stockChange'>Change Stock</button><input type="hidden" name="uid" value="${uid}"></form></td>
+	</tr>
+</script>
+
+
+<script>
+	apidom  ='https://api.voistock.com';
+</script>
+
+<!-- playlist追加モーダル -->
+<div class="modal fade" id="addPlaylistModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-quote">Playlists追加</h4>
+			</div>
+	        <div class="modal-body">
+				<span id="quote-body-area">
+					<p>Playlistsを追加します</p>
+					<form method="post" action="https://www.voistock.com/en/playlist/add.php" class="add-playlist-form">
+						<table class="playlistAddTable">
+							<tbody><tr><td>
+									Playlists写真</td><td><canvas id="playlist-cvs" data-src="/en/playlist/img/default.png" width="150" height="150"></canvas><br>
+									<button type="button" class="btn btn-warning" id="playlist-image-upload">Change picture</button>
+									<input type="file" id="playlistImageUp" name="playlistimg" style="display: none;">
+							</td></tr>
+							<tr><td>Playlists名</td><td><input type="text" name="playlistname" class="add-playlistname" value=""></td></tr>
+							<tr><td>Public</td><td><label>Non-Public <input type="checkbox" name="playlistFeed" class="js-switch playlist-feedFlag" checked="" data-switchery="true" style="display: none;"><span class="switchery switchery-default" style="background-color: rgb(15, 90, 165); border-color: rgb(15, 90, 165); box-shadow: rgb(15, 90, 165) 0px 0px 0px 0px inset; transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s, background-color 1.2s ease 0s;"><small style="left: 12px; background-color: rgb(255, 255, 255); transition: background-color 0.4s ease 0s, left 0.2s ease 0s;"></small></span> Make Public</label></td></tr>
+							<tr><td>Voicetags</td><td> <input id="playListTags" type="text" class="tags form-control" value="" data-tagsinput-init="true" style="display: none;"><div id="playListTags_tagsinput" class="tagsinput" style="width: auto; min-height: 100px; height: 100px;"><div id="playListTags_addTag"><input id="playListTags_tag" value="" data-default="タグ追加…" style="color: rgb(102, 102, 102); width: 72px;"></div><div class="tags_clear"></div></div><div id="suggestions-container" style="position: relative; float: left; margin: 10px;"></div></td></tr>
+						</tbody></table>
+						<button type="button" class="btn btn-info add-playlist">追加する</button>
+						<input type="hidden" id="playlist-uid" name="uid" value="643e79e43e418628a6110b99">
+						<input type="hidden" id="playlist-vid" name="vid" value="">
+					</form>
+					
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+
+
+        <!-- /top navigation -->
+		<div class="clearfix"></div>
+		
+<script>
+	uid = '643e79e43e418628a6110b99';
+	apidom = 'https://api.voistock.com';	
+</script>
+        <div class="right_col" role="main" style="min-height: 1117px;">
+			<div class="row top_tiles">
+			</div>
+          <!-- バナーとPlay回数外してみる -->  
+<!--			<div class="row top_tiles">
+				<div class="animated col-lg-8 col-md-8 col-sm-12 col-xs-12">
+					<ul class="top_slick"  width="90%">
+						<li width="100%"><a href="code/"><img src="images/topbanner.png?202304190008" class="slide-image" width="100%"></a></li>
+						<li width="100%"><a href="quiz_redirect.php" target="_blank"><img src="images/quizBanner_ver.png?202304190008" class="slide-image" width="100%"></a></li>
+						<li width="100%"><a href="voistock_app_redirect.php" target="_blank"><img src="images/voistockAppBanner.png?202304190008" class="slide-image" width="100%"></a></li>
+					</ul>
+				</div>
+				
+				<div class="animated flipInY col-lg-4 col-md-4 col-sm-12 col-xs-12 playcount-box">
+				  <div class="tile-stats">
+					<div class="icon"><i class="fa fa-caret-square-o-right top-catch-icon"></i></div>
+					<div class="count">0</div>
+					<h3>Play count of yesterday</h3>
+					<p>Play count of 17 Apr</p>
+				  </div>
+				</div>
+				
+			</div>-->
+			
+			
+        <div class="row topcontentsArea" style="position: relative; height: 3542.09px;">
+            
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-item" style="position: absolute; left: 0%; top: 0px;">
+              <div class="x_panel">
+                <div class="x_title datalist">
+                  <h2><i class="fa fa-list"></i> 人気Playlists</h2>
+					 <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+                  <div class="clearfix"></div>
+                </div>
+				  
+                  <div class="x_content">
+	
+                    <article class="media event">
+						<div class="playlisticon"><a href="https://www.voistock.com/en/playlist/detail.php?pk=TFUNEHV59"><img class="pull-left" src="./VoiStock Web β_files/playlistImage.php"></a></div>
+                      <div class="media-body">
+                        <a class="title playlistname" href="https://www.voistock.com/en/playlist/detail.php?pk=TFUNEHV59">【ウマ娘】マヤノトップガン Playlists</a>
+						<br>
+                        <a class="voicenum" href="https://www.voistock.com/en/playlist/detail.php?pk=TFUNEHV59">215 Voice</a>
+						<br>
+                            <i class="fas fa-play"><span class="playNum">468</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="playlisticon"><a href="https://www.voistock.com/en/playlist/detail.php?pk=4X9NJ77VP"><img class="pull-left" src="./VoiStock Web β_files/playlistImage(1).php"></a></div>
+                      <div class="media-body">
+                        <a class="title playlistname" href="https://www.voistock.com/en/playlist/detail.php?pk=4X9NJ77VP">【ラブライブ！】秘密の差し入れ・黒澤ルビィVoice集</a>
+						<br>
+                        <a class="voicenum" href="https://www.voistock.com/en/playlist/detail.php?pk=4X9NJ77VP">10 Voice</a>
+						<br>
+                            <i class="fas fa-play"><span class="playNum">8K</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="playlisticon"><a href="https://www.voistock.com/en/playlist/detail.php?pk=B4WXUCCNS"><img class="pull-left" src="./VoiStock Web β_files/playlistImage(2).php"></a></div>
+                      <div class="media-body">
+                        <a class="title playlistname" href="https://www.voistock.com/en/playlist/detail.php?pk=B4WXUCCNS">ハイキュー!!姫川 葵のシーンを聴こう！</a>
+						<br>
+                        <a class="voicenum" href="https://www.voistock.com/en/playlist/detail.php?pk=B4WXUCCNS">2 Voice</a>
+						<br>
+                            <i class="fas fa-play"><span class="playNum">116</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="playlisticon"><a href="https://www.voistock.com/en/playlist/detail.php?pk=LQJPCGQBG"><img class="pull-left" src="./VoiStock Web β_files/playlistImage(3).php"></a></div>
+                      <div class="media-body">
+                        <a class="title playlistname" href="https://www.voistock.com/en/playlist/detail.php?pk=LQJPCGQBG">【ラブライブ！】楽しい1日の始まり！・高海千歌Voice集</a>
+						<br>
+                        <a class="voicenum" href="https://www.voistock.com/en/playlist/detail.php?pk=LQJPCGQBG">10 Voice</a>
+						<br>
+                            <i class="fas fa-play"><span class="playNum">8K</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="playlisticon"><a href="https://www.voistock.com/en/playlist/detail.php?pk=VL9A4VL7H"><img class="pull-left" src="./VoiStock Web β_files/playlistImage(4).php"></a></div>
+                      <div class="media-body">
+                        <a class="title playlistname" href="https://www.voistock.com/en/playlist/detail.php?pk=VL9A4VL7H">「銀魂」志村新八の誕生日記念Playlists！</a>
+						<br>
+                        <a class="voicenum" href="https://www.voistock.com/en/playlist/detail.php?pk=VL9A4VL7H">4 Voice</a>
+						<br>
+                            <i class="fas fa-play"><span class="playNum">45</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="playlisticon"><a href="https://www.voistock.com/en/playlist/detail.php?pk=66K7952U6"><img class="pull-left" src="./VoiStock Web β_files/playlistImage(5).php"></a></div>
+                      <div class="media-body">
+                        <a class="title playlistname" href="https://www.voistock.com/en/playlist/detail.php?pk=66K7952U6">【ラブライブ！】カラーと果南・松浦果南Voice集</a>
+						<br>
+                        <a class="voicenum" href="https://www.voistock.com/en/playlist/detail.php?pk=66K7952U6">10 Voice</a>
+						<br>
+                            <i class="fas fa-play"><span class="playNum">8K</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                      </div>
+                    </article>
+
+                    <article class="media event">
+                        <script async="" src="./VoiStock Web β_files/f(7).txt"></script>
+                        <ins class="adsbygoogle" style="display: block; height: 94px;" data-ad-format="fluid" data-ad-layout-key="-i5-j+o-30+7q" data-ad-client="ca-pub-5394123364428126" data-ad-slot="7705327600" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_0_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 94px; width: 445px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:445px;height:94px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="445" height="94" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads.html" data-google-container-id="a!1" data-google-query-id="CPWy0LDos_4CFVMKKgodQPcMlQ" data-load-complete="true"></iframe></div></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>				
+                    </article>
+
+                  </div>
+              </div>
+            </div>	
+
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-item  grid-sizer" style="position: absolute; left: 33.3325%; top: 0px;">
+              <div class="x_panel">
+                <div class="x_title datalist">
+                  <h2><i class="fa fa-child"></i> Popular Voices</h2>
+					 <button type="button" class="btn btn-xs btn-info pull-right btn-voicesearch"><i class="fa fa-search"></i>Search for Voices</button>
+                  <div class="clearfix"></div>
+                </div>
+				  
+                  <div class="x_content">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5b62dbbc3e418649707bb49f"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5b62dbbc3e418649707bb49f" id="voice5b62dbbc3e418649707bb49f" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5b62dbbc3e418649707bb49f"><p class="textbody">またそれか…そんなことよりお前、髪長すぎやしないか？立体機動の訓練で事故になるかもしれんぞ？</p><p class="mq">またそれか…そんなことよりお前、髪長すぎやしないか？立体機動の訓練で事故になるかもしれんぞ？</p></a>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=23L-NLM-ZGS"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image.php"></div></a>
+						<span class="marginleft5 stockname">エレン・イェーガー（進撃の巨人）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">154,054</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>							<div class="btn-group dropup playlistgroup"><i class="fa fa-ellipsis-h dropdown-toggle playlist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-vid="5b62dbbc3e418649707bb49f"></i><ul class="dropdown-menu playlist-data dd-right" role="menu"></ul></div>                        </span>
+                    </div>
+                    </article>		                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5bc6eb303e4186786a7eb01d"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bc6eb303e4186786a7eb01d" id="voice5bc6eb303e4186786a7eb01d" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5bc6eb303e4186786a7eb01d"><p class="textbody">ふん、どうしたんだいフラワー元気ないねえ</p><p class="mq">ふん、どうしたんだいフラワー元気ないねえ</p></a>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=23L-NLM-ZGS"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image.php"></div></a>
+						<span class="marginleft5 stockname">カラ松（おそ松さん）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">146,015</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>							<div class="btn-group dropup playlistgroup"><i class="fa fa-ellipsis-h dropdown-toggle playlist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-vid="5bc6eb303e4186786a7eb01d"></i><ul class="dropdown-menu playlist-data dd-right" role="menu"></ul></div>                        </span>
+                    </div>
+                    </article>		                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5aeaad143e4186193650a250"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5aeaad143e4186193650a250" id="voice5aeaad143e4186193650a250" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5aeaad143e4186193650a250"><p class="textbody">ひゃん！</p><p class="mq">ひゃん！</p></a>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=3HS-VFJ-LRR"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(1).php"></div></a>
+						<span class="marginleft5 stockname">クロノ（夢王国と眠れる100人の王子様）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">285,307</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>							<div class="btn-group dropup playlistgroup"><i class="fa fa-ellipsis-h dropdown-toggle playlist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-vid="5aeaad143e4186193650a250"></i><ul class="dropdown-menu playlist-data dd-right" role="menu"></ul></div>                        </span>
+                    </div>
+                    </article>		                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5af0163a3e41862a816e7a72"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5af0163a3e41862a816e7a72" id="voice5af0163a3e41862a816e7a72" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5af0163a3e41862a816e7a72"><p class="textbody">ソリャ〜</p><p class="mq">ソリャ〜</p></a>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=7AZ-ALC-S9L"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(2).php"></div></a>
+						<span class="marginleft5 stockname">ドラえもん（ドラえもん）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">166,854</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>							<div class="btn-group dropup playlistgroup"><i class="fa fa-ellipsis-h dropdown-toggle playlist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-vid="5af0163a3e41862a816e7a72"></i><ul class="dropdown-menu playlist-data dd-right" role="menu"></ul></div>                        </span>
+                    </div>
+                    </article>		                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5bc6f1663e4186217d07b20a"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bc6f1663e4186217d07b20a" id="voice5bc6f1663e4186217d07b20a" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5bc6f1663e4186217d07b20a"><p class="textbody">今日は絶対に行かないぞ！</p><p class="mq">今日は絶対に行かないぞ！</p></a>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=23L-NLM-ZGS"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image.php"></div></a>
+						<span class="marginleft5 stockname">カラ松（おそ松さん）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">146,263</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>							<div class="btn-group dropup playlistgroup"><i class="fa fa-ellipsis-h dropdown-toggle playlist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-vid="5bc6f1663e4186217d07b20a"></i><ul class="dropdown-menu playlist-data dd-right" role="menu"></ul></div>                        </span>
+                    </div>
+                    </article>		                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5b62dbbc3e418649707bb49d"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5b62dbbc3e418649707bb49d" id="voice5b62dbbc3e418649707bb49d" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5b62dbbc3e418649707bb49d"><p class="textbody">ふぉ…あいつだ、俺を見て逃げやがったぞ</p><p class="mq">ふぉ…あいつだ、俺を見て逃げやがったぞ</p></a>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=23L-NLM-ZGS"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image.php"></div></a>
+						<span class="marginleft5 stockname">エレン・イェーガー（進撃の巨人）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">154,425</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>							<div class="btn-group dropup playlistgroup"><i class="fa fa-ellipsis-h dropdown-toggle playlist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-vid="5b62dbbc3e418649707bb49d"></i><ul class="dropdown-menu playlist-data dd-right" role="menu"></ul></div>                        </span>
+                    </div>
+                    </article>		
+<article class="media event voiceplate">
+<ins class="adsbygoogle" style="display: block; height: 94px;" data-ad-format="fluid" data-ad-layout-key="-i5-j+o-30+7q" data-ad-client="ca-pub-5394123364428126" data-ad-slot="7705327600" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 94px; width: 445px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:445px;height:94px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="445" height="94" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads(1).html" data-google-container-id="a!2" data-load-complete="true" data-google-query-id="CNO-0LDos_4CFcc4KgodF5QBmw"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</article>
+                  </div>
+              </div>
+            </div>
+
+            		
+
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-item" style="position: absolute; left: 66.6649%; top: 0px;">
+              <div class="x_panel">
+                <div class="x_title datalist">
+					<h2><i class="fa fa-comment-o"></i> Popular Stocks</h2>
+					 <button type="button" class="btn btn-xs btn-info pull-right btn-stocksearch"><i class="fa fa-search"></i>Search for Stocks</button>
+                  <div class="clearfix"></div>
+                </div>
+				  
+                  <div class="x_content">
+	
+                    <article class="media event">
+						<div class="usericon"><a href="https://www.voistock.com/en/userprof/?uk=YNS-ZNZ-QJ2"><img class="pull-left" src="./VoiStock Web β_files/image(3).php"></a></div>
+                      <div class="media-body">
+                        <a class="title" href="https://www.voistock.com/en/userprof/?uk=YNS-ZNZ-QJ2">AsteRisM⁂</a>
+                        <p><span> 50Voice</span></p>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="usericon"><a href="https://www.voistock.com/en/userprof/?uk=WUL-75F-PM8"><img class="pull-left" src="./VoiStock Web β_files/image(4).php"></a></div>
+                      <div class="media-body">
+                        <a class="title" href="https://www.voistock.com/en/userprof/?uk=WUL-75F-PM8">RUSH×300</a>
+                        <p><span> 50Voice</span></p>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="usericon"><a href="https://www.voistock.com/en/userprof/?uk=P4T-9DR-WVM"><img class="pull-left" src="./VoiStock Web β_files/image(5).php"></a></div>
+                      <div class="media-body">
+                        <a class="title" href="https://www.voistock.com/en/userprof/?uk=P4T-9DR-WVM">CoLoN: </a>
+                        <p><span> 90Voice</span></p>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="usericon"><a href="https://www.voistock.com/en/userprof/?uk=B9Q-8AH-9SX"><img class="pull-left" src="./VoiStock Web β_files/image(6).php"></a></div>
+                      <div class="media-body">
+                        <a class="title" href="https://www.voistock.com/en/userprof/?uk=B9Q-8AH-9SX">トレクル</a>
+                        <p><span> 378Voice</span></p>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="usericon"><a href="https://www.voistock.com/en/userprof/?uk=XA7-7CQ-CNJ"><img class="pull-left" src="./VoiStock Web β_files/image(7).php"></a></div>
+                      <div class="media-body">
+                        <a class="title" href="https://www.voistock.com/en/userprof/?uk=XA7-7CQ-CNJ">七つの大罪Voiceまとめ！</a>
+                        <p><span> 60Voice</span></p>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="usericon"><a href="https://www.voistock.com/en/userprof/?uk=F2G-KFB-RG9"><img class="pull-left" src="./VoiStock Web β_files/image(8).php"></a></div>
+                      <div class="media-body">
+                        <a class="title" href="https://www.voistock.com/en/userprof/?uk=F2G-KFB-RG9">原神</a>
+                        <p><span> 18,796Voice</span></p>
+                      </div>
+                    </article>
+                    <article class="media event">
+                        <ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-format="fluid" data-ad-layout-key="-i5-j+o-30+7q" data-ad-client="ca-pub-5394123364428126" data-ad-slot="7705327600" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_2_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 445px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_2" name="aswift_2" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 445px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="445" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads(2).html" data-google-container-id="a!3" data-load-complete="true" data-google-query-id="CPyp0LDos_4CFQJyKgodPJAKgQ"></iframe></div></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>				
+                    </article>					  
+                  </div>
+              </div>
+            </div>
+			
+			
+
+			
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-item" style="position: absolute; left: 0%; top: 885px;">
+              <div class="x_panel">
+                <div class="x_title datalist">
+					<h2><img src="./VoiStock Web β_files/newicon.png" class="top-new-icon"> 最新Voice</h2>
+					 <button type="button" class="btn btn-xs btn-info pull-right btn-voicesearch"><i class="fa fa-search"></i>Search for Voices</button>
+                  <div class="clearfix"></div>
+                </div>
+				  
+                  <div class="x_content">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="mqarea">
+						<div class="playicon text-left voiceplay" data-vid="5af0163a3e41862a816e7a77"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5af0163a3e41862a816e7a77" id="voice5af0163a3e41862a816e7a77" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5af0163a3e41862a816e7a77"><p class="textbody">おはよう！</p><p class="mq">おはよう！</p></a>
+						</div>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=7AZ-ALC-S9L"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(2).php"></div></a>
+						<span class="marginleft5 stockname">ドラえもん（ドラえもん）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">168,278</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>							<div class="btn-group dropup playlistgroup"><i class="fa fa-ellipsis-h dropdown-toggle playlist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-vid="5af0163a3e41862a816e7a77"></i><ul class="dropdown-menu playlist-data dd-right" role="menu"></ul></div>                        </span>
+                    </div>
+                    </article>
+						
+						                    <article class="media event voiceplate">
+                    <div class="voicePostContents cuteVoice">
+						<div class="mqarea">
+						<div class="playicon text-left voiceplay" data-vid="5bd019823e418613d30ff0a2"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bd019823e418613d30ff0a2" id="voice5bd019823e418613d30ff0a2" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5bd019823e418613d30ff0a2"><p class="textbody">失ったものばかり数えるな！ないものはない！お前にまだ残っているものはなんじゃ？</p><p class="mq">失ったものばかり数えるな！ないものはない！お前にまだ残っているものはなんじゃ？</p></a>
+						</div>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=XGT-3GZ-DXT"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(9).php"></div></a>
+						<span class="marginleft5 stockname">ジンベエ（ONE PIECE）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">6,143</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>							<div class="btn-group dropup playlistgroup"><i class="fa fa-ellipsis-h dropdown-toggle playlist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-vid="5bd019823e418613d30ff0a2"></i><ul class="dropdown-menu playlist-data dd-right" role="menu"></ul></div>                        </span>
+                    </div>
+                    </article>
+						
+						                    <article class="media event voiceplate">
+                    <div class="voicePostContents sexyVoice">
+						<div class="mqarea">
+						<div class="playicon text-left voiceplay" data-vid="5bced3c53e41865968645f92"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bced3c53e41865968645f92" id="voice5bced3c53e41865968645f92" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5bced3c53e41865968645f92"><p class="textbody">は！ちょ、ちょっと。やっぱあんた、なんか目つきが怪しいよ</p><p class="mq">は！ちょ、ちょっと。やっぱあんた、なんか目つきが怪しいよ</p></a>
+						</div>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=QB9-ZGV-2HU"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(10).php"></div></a>
+						<span class="marginleft5 stockname">澤村・スペンサー・英梨々（冴えない彼女の育てかた）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">30,037</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>							<div class="btn-group dropup playlistgroup"><i class="fa fa-ellipsis-h dropdown-toggle playlist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-vid="5bced3c53e41865968645f92"></i><ul class="dropdown-menu playlist-data dd-right" role="menu"></ul></div>                        </span>
+                    </div>
+                    </article>
+						
+						                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="mqarea">
+						<div class="playicon text-left voiceplay" data-vid="5bcd96473e418615362f9da1"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bcd96473e418615362f9da1" id="voice5bcd96473e418615362f9da1" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5bcd96473e418615362f9da1"><p class="textbody">ぱないのー！</p><p class="mq">ぱないのー！</p></a>
+						</div>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=XGT-3GZ-DXT"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(9).php"></div></a>
+						<span class="marginleft5 stockname">忍野忍（物語シリーズ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">5,589</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>							<div class="btn-group dropup playlistgroup"><i class="fa fa-ellipsis-h dropdown-toggle playlist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-vid="5bcd96473e418615362f9da1"></i><ul class="dropdown-menu playlist-data dd-right" role="menu"></ul></div>                        </span>
+                    </div>
+                    </article>
+						
+						                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="mqarea">
+						<div class="playicon text-left voiceplay" data-vid="5b3085b23e4186672037025e"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5b3085b23e4186672037025e" id="voice5b3085b23e4186672037025e" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5b3085b23e4186672037025e"><p class="textbody">やぁ！</p><p class="mq">やぁ！</p></a>
+						</div>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=U6C-8AH-9SN"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(11).php"></div></a>
+						<span class="marginleft5 stockname">ジャック・ザ・リッパー（Fate）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">8,631</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>							<div class="btn-group dropup playlistgroup"><i class="fa fa-ellipsis-h dropdown-toggle playlist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-vid="5b3085b23e4186672037025e"></i><ul class="dropdown-menu playlist-data dd-right" role="menu"></ul></div>                        </span>
+                    </div>
+                    </article>
+						
+						<article class="media event voiceplate">
+<ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-format="fluid" data-ad-layout-key="-i5-j+o-30+7q" data-ad-client="ca-pub-5394123364428126" data-ad-slot="7705327600" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_3_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 445px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_3" name="aswift_3" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 445px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="445" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads(3).html" data-google-container-id="a!4" data-load-complete="true" data-google-query-id="COKM0bDos_4CFcYFKgodOGEGnQ"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+					  
+                  </div>
+              </div>
+            </div>
+
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item" style="position: absolute; left: 33.3325%; top: 885px;">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="https://www.voistock.com/en/playlist/detail.php?pk=X52MV8PZY">
+                              <img src="./VoiStock Web β_files/playlistImage(6).php" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">先輩！を聞きまくる！</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 276,527 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 1 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 14 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents sadVoice">
+						<div class="playicon text-left voiceplay" data-vid="5b2b5d353e4186019d1072d4"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5b2b5d353e4186019d1072d4" id="voice5b2b5d353e4186019d1072d4" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5b2b5d353e4186019d1072d4"><p class="textbody">武装完了……行きます、先輩！</p></a><p class="mq">武装完了……行きます、先輩！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=U6C-8AH-9SN"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(11).php"></div></a>
+						<span class="marginleft5 stockname">マシュ・キリエライト（Fate ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">22,733</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents happyVoice">
+						<div class="playicon text-left voiceplay" data-vid="5b2b5f923e41862fce2bee34"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5b2b5f923e41862fce2bee34" id="voice5b2b5f923e41862fce2bee34" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5b2b5f923e41862fce2bee34"><p class="textbody">お疲れ様です。レベルアップですよ、先輩</p></a><p class="mq">お疲れ様です。レベルアップですよ、先輩</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=U6C-8AH-9SN"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(11).php"></div></a>
+						<span class="marginleft5 stockname">マシュ・キリエライト（Fate ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">19,453</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents cuteVoice">
+						<div class="playicon text-left voiceplay" data-vid="5b2b60653e41863767173887"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5b2b60653e41863767173887" id="voice5b2b60653e41863767173887" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5b2b60653e41863767173887"><p class="textbody">先輩のお役に、もっと立ちたいんです</p></a><p class="mq">先輩のお役に、もっと立ちたいんです</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=U6C-8AH-9SN"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(11).php"></div></a>
+						<span class="marginleft5 stockname">マシュ・キリエライト（Fate ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">19,344</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="https://www.voistock.com/en/playlist/detail.php?pk=X52MV8PZY">...11 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-format="fluid" data-ad-layout-key="-i5-j+o-30+7q" data-ad-client="ca-pub-5394123364428126" data-ad-slot="7705327600" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_4_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 445px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_4" name="aswift_4" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 445px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="445" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads(4).html" data-google-container-id="a!5" data-load-complete="true" data-google-query-id="CJXe0LDos_4CFcbHTAIdsQ8Png"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item" style="position: absolute; left: 66.6649%; top: 885px;">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="https://www.voistock.com/en/playlist/detail.php?pk=YMLLSU55G">
+                              <img src="./VoiStock Web β_files/playlistImage(7).php" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">百の声をBGMに</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 273,373 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 1 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 59 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5ba344e33e418659fc37c00b"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5ba344e33e418659fc37c00b" id="voice5ba344e33e418659fc37c00b" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5ba344e33e418659fc37c00b"><p class="textbody">メールだよーん！</p></a><p class="mq">メールだよーん！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=ESC-BBL-CA4"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(12).php"></div></a>
+						<span class="marginleft5 stockname">春原百瀬（アイドリッシュセブン ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">4,971</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5ba344e33e418659fc37c00c"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5ba344e33e418659fc37c00c" id="voice5ba344e33e418659fc37c00c" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5ba344e33e418659fc37c00c"><p class="textbody">ありがとう、おかりん！！でも、まだ早いでしょ！</p></a><p class="mq">ありがとう、おかりん！！でも、まだ早いでしょ！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=ESC-BBL-CA4"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(12).php"></div></a>
+						<span class="marginleft5 stockname">春原百瀬（アイドリッシュセブン ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">4,772</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5ba344e33e418659fc37c00d"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5ba344e33e418659fc37c00d" id="voice5ba344e33e418659fc37c00d" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5ba344e33e418659fc37c00d"><p class="textbody">マネ子ちゃん、いつもお疲れ様ー！刺激的でハッピーな毎日をありがとね！はい、今日は限定ラッピングモモリンをあげちゃう！</p></a><p class="mq">マネ子ちゃん、いつもお疲れ様ー！刺激的でハッピーな毎日をありがとね！はい、今日は限定ラッピングモモリンをあげちゃう！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=ESC-BBL-CA4"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(12).php"></div></a>
+						<span class="marginleft5 stockname">春原百瀬（アイドリッシュセブン ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">4,701</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="https://www.voistock.com/en/playlist/detail.php?pk=YMLLSU55G">...56 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-format="fluid" data-ad-layout-key="-i5-j+o-30+7q" data-ad-client="ca-pub-5394123364428126" data-ad-slot="7705327600" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_5_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 445px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_5" name="aswift_5" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 445px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="445" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads(5).html" data-google-container-id="a!6" data-load-complete="true" data-google-query-id="CJ-z0LDos_4CFcNSKgodMtcDjg"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item" style="position: absolute; left: 0%; top: 1655px;">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="https://www.voistock.com/en/playlist/detail.php?pk=WMM5ZLU5S">
+                              <img src="./VoiStock Web β_files/playlistImage(8).php" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">ピカチュウ鳴き声</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 84,414 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 6 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 6 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents happyVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bf0dfb23e41861c9f793412"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bf0dfb23e41861c9f793412" id="voice5bf0dfb23e41861c9f793412" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5bf0dfb23e41861c9f793412"><p class="textbody">ピカピカー</p></a><p class="mq">ピカピカー</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=7DX-A89-MXR"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(13).php"></div></a>
+						<span class="marginleft5 stockname">ピカチュウ（ポケットモンスター ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">14,406</span></i>
+                            <i class="fas fa-heart"><span class="favNum">4</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents happyVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bf0dfb23e41861c9f793413"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bf0dfb23e41861c9f793413" id="voice5bf0dfb23e41861c9f793413" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5bf0dfb23e41861c9f793413"><p class="textbody">ピカチュウ！</p></a><p class="mq">ピカチュウ！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=7DX-A89-MXR"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(13).php"></div></a>
+						<span class="marginleft5 stockname">ピカチュウ（ポケットモンスター ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">14,315</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents happyVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bf0dfb23e41861c9f793414"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bf0dfb23e41861c9f793414" id="voice5bf0dfb23e41861c9f793414" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5bf0dfb23e41861c9f793414"><p class="textbody">ピカチュウー</p></a><p class="mq">ピカチュウー</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=7DX-A89-MXR"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(13).php"></div></a>
+						<span class="marginleft5 stockname">ピカチュウ（ポケットモンスター ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">15,384</span></i>
+                            <i class="fas fa-heart"><span class="favNum">3</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="https://www.voistock.com/en/playlist/detail.php?pk=WMM5ZLU5S">...3 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-format="fluid" data-ad-layout-key="-i5-j+o-30+7q" data-ad-client="ca-pub-5394123364428126" data-ad-slot="7705327600" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_6_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 445px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_6" name="aswift_6" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 445px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="445" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads(6).html" data-google-container-id="a!7" data-load-complete="true" data-google-query-id="CMm00LDos_4CFRMzKgodO7sDBQ"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item" style="position: absolute; left: 66.6649%; top: 1702.33px;">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="https://www.voistock.com/en/playlist/detail.php?pk=9VD3EFVR6">
+                              <img src="./VoiStock Web β_files/playlistImage(9).php" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">月火ちゃん、記憶がトビウオ！</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 4,063,863 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 7 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 109 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5bbf18aa3e41861b8f1878e4"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bbf18aa3e41861b8f1878e4" id="voice5bbf18aa3e41861b8f1878e4" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5bbf18aa3e41861b8f1878e4"><p class="textbody">厳しいねー</p></a><p class="mq">厳しいねー</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=TY3-59F-A7A"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(14).php"></div></a>
+						<span class="marginleft5 stockname">阿良々木月火（物語シリーズ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">35,122</span></i>
+                            <i class="fas fa-heart"><span class="favNum">3</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5aebb8ed3e4186189915a724"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5aebb8ed3e4186189915a724" id="voice5aebb8ed3e4186189915a724" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5aebb8ed3e4186189915a724"><p class="textbody">二度寝するようなお兄ちゃんは死んでいいに決まってるじゃない</p></a><p class="mq">二度寝するようなお兄ちゃんは死んでいいに決まってるじゃない</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=TRF-SXC-BUA"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(15).php"></div></a>
+						<span class="marginleft5 stockname">阿良々木月火（物語シリーズ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">37,965</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5aebb8ed3e4186189915a726"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5aebb8ed3e4186189915a726" id="voice5aebb8ed3e4186189915a726" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5aebb8ed3e4186189915a726"><p class="textbody">死ねばいい。死ねばいいんだ。死ねばいいんだ！</p></a><p class="mq">死ねばいい。死ねばいいんだ。死ねばいいんだ！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=TRF-SXC-BUA"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(15).php"></div></a>
+						<span class="marginleft5 stockname">阿良々木月火（物語シリーズ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">35,143</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="https://www.voistock.com/en/playlist/detail.php?pk=9VD3EFVR6">...106 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-format="fluid" data-ad-layout-key="-i5-j+o-30+7q" data-ad-client="ca-pub-5394123364428126" data-ad-slot="7705327600" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_7_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 445px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_7" name="aswift_7" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 445px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="445" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads(7).html" data-google-container-id="a!8" data-load-complete="true" data-google-query-id="CMO90LDos_4CFRIfKgodUcMHmA"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item" style="position: absolute; left: 33.3325%; top: 1750.33px;">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="https://www.voistock.com/en/playlist/detail.php?pk=SYPX87PUX">
+                              <img src="./VoiStock Web β_files/playlistImage(10).php" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">加藤恵Voiceを楽しもう</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 2,764,538 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 11 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 53 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents cuteVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bd8785c3e41865de8340785"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bd8785c3e41865de8340785" id="voice5bd8785c3e41865de8340785" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5bd8785c3e41865de8340785"><p class="textbody">ありがとう</p></a><p class="mq">ありがとう</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=QB9-ZGV-2HU"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(10).php"></div></a>
+						<span class="marginleft5 stockname">加藤恵（冴えない彼女の育てかた ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">66,234</span></i>
+                            <i class="fas fa-heart"><span class="favNum">4</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents cuteVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bd8785c3e41865de8340784"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bd8785c3e41865de8340784" id="voice5bd8785c3e41865de8340784" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5bd8785c3e41865de8340784"><p class="textbody">ま、それはともかく、えっとー新しい帽子ありがとう</p></a><p class="mq">ま、それはともかく、えっとー新しい帽子ありがとう</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=QB9-ZGV-2HU"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(10).php"></div></a>
+						<span class="marginleft5 stockname">加藤恵（冴えない彼女の育てかた ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">54,155</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents cuteVoice">
+						<div class="playicon text-left voiceplay" data-vid="5abdf57b3e4186620461bae7"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5abdf57b3e4186620461bae7" id="voice5abdf57b3e4186620461bae7" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5abdf57b3e4186620461bae7"><p class="textbody">了解</p></a><p class="mq">了解</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=QB9-ZGV-2HU"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(10).php"></div></a>
+						<span class="marginleft5 stockname">加藤恵（冴えない彼女の育てかた ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">52,433</span></i>
+                            <i class="fas fa-heart"><span class="favNum">4</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="https://www.voistock.com/en/playlist/detail.php?pk=SYPX87PUX">...50 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-format="fluid" data-ad-layout-key="-i5-j+o-30+7q" data-ad-client="ca-pub-5394123364428126" data-ad-slot="7705327600" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_8_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 445px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_8" name="aswift_8" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 445px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="445" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads(8).html" data-google-container-id="a!9" data-load-complete="true" data-google-query-id="CIjW0LDos_4CFYMWKgod9ekFxg"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item" style="position: absolute; left: 0%; top: 2421.33px;">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="https://www.voistock.com/en/playlist/detail.php?pk=J6KSVTBAR">
+                              <img src="./VoiStock Web β_files/playlistImage(11).php" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">中村翔Playlists</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 257,095 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 69 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 10 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents peacefulVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c867f7d3e4186119f24cc57"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c867f7d3e4186119f24cc57" id="voice5c867f7d3e4186119f24cc57" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5c867f7d3e4186119f24cc57"><p class="textbody"> <i class="fas fa-headphones-alt"></i> おはよう</p></a><p class="mq">おはよう</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=YNS-ZNZ-QJ2"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(3).php"></div></a>
+						<span class="marginleft5 stockname">中村翔（BACS ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						<img src="./VoiStock Web β_files/googlespeach.png" class="googlespearch"><i class="fas fa-headphones-alt asmrIcon"></i>                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">65,496</span></i>
+                            <i class="fas fa-heart"><span class="favNum">4</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents peacefulVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c8680633e4186116d493cfd"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c8680633e4186116d493cfd" id="voice5c8680633e4186116d493cfd" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5c8680633e4186116d493cfd"><p class="textbody"> <i class="fas fa-headphones-alt"></i> おやすみ</p></a><p class="mq">おやすみ</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=YNS-ZNZ-QJ2"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(3).php"></div></a>
+						<span class="marginleft5 stockname">中村翔（BACS ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						<img src="./VoiStock Web β_files/googlespeach.png" class="googlespearch"><i class="fas fa-headphones-alt asmrIcon"></i>                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">63,242</span></i>
+                            <i class="fas fa-heart"><span class="favNum">3</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents peacefulVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c8680733e4186165161e257"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c8680733e4186165161e257" id="voice5c8680733e4186165161e257" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5c8680733e4186165161e257"><p class="textbody"> <i class="fas fa-headphones-alt"></i> ヤッホー</p></a><p class="mq">ヤッホー</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=YNS-ZNZ-QJ2"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(3).php"></div></a>
+						<span class="marginleft5 stockname">中村翔（BACS ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						<img src="./VoiStock Web β_files/googlespeach.png" class="googlespearch"><i class="fas fa-headphones-alt asmrIcon"></i>                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">21,159</span></i>
+                            <i class="fas fa-heart"><span class="favNum">3</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="https://www.voistock.com/en/playlist/detail.php?pk=J6KSVTBAR">...7 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-format="fluid" data-ad-layout-key="-i5-j+o-30+7q" data-ad-client="ca-pub-5394123364428126" data-ad-slot="7705327600" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_9_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 445px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_9" name="aswift_9" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 445px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="445" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads(9).html" data-google-container-id="a!a" data-load-complete="true" data-google-query-id="COvd_7Hos_4CFUQcKgodDvgOnw"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item" style="position: absolute; left: 66.6649%; top: 2569.66px;">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="https://www.voistock.com/en/playlist/detail.php?pk=7MULK3ALA">
+                              <img src="./VoiStock Web β_files/playlistImage(12).php" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">有働</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 283,080 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 68 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 5 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents sexyVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c87572b3e41862c0a496608"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c87572b3e41862c0a496608" id="voice5c87572b3e41862c0a496608" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5c87572b3e41862c0a496608"><p class="textbody"> <i class="fas fa-headphones-alt"></i> おはよう</p></a><p class="mq">おはよう</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=WUL-75F-PM8"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(4).php"></div></a>
+						<span class="marginleft5 stockname">有働拓磨（BACS ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						<img src="./VoiStock Web β_files/googlespeach.png" class="googlespearch"><i class="fas fa-headphones-alt asmrIcon"></i>                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">106,344</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents peacefulVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c8757323e418626bb7a4d52"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c8757323e418626bb7a4d52" id="voice5c8757323e418626bb7a4d52" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5c8757323e418626bb7a4d52"><p class="textbody"> <i class="fas fa-headphones-alt"></i> おやすみ</p></a><p class="mq">おやすみ</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=WUL-75F-PM8"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(4).php"></div></a>
+						<span class="marginleft5 stockname">有働拓磨（BACS ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						<img src="./VoiStock Web β_files/googlespeach.png" class="googlespearch"><i class="fas fa-headphones-alt asmrIcon"></i>                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">94,143</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents sexyVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c8757373e418626bb7a4d54"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c8757373e418626bb7a4d54" id="voice5c8757373e418626bb7a4d54" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="https://www.voistock.com/en/voicelist/voice.php?vid=5c8757373e418626bb7a4d54"><p class="textbody"> <i class="fas fa-headphones-alt"></i> ヤッホー</p></a><p class="mq">ヤッホー</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="https://www.voistock.com/userprof/index.php?uk=WUL-75F-PM8"><div class="usericon voiceicon"><img class="pull-left listicon" src="./VoiStock Web β_files/image(4).php"></div></a>
+						<span class="marginleft5 stockname">有働拓磨（BACS ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						<img src="./VoiStock Web β_files/googlespeach.png" class="googlespearch"><i class="fas fa-headphones-alt asmrIcon"></i>                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">52,255</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="https://www.voistock.com/en/playlist/detail.php?pk=7MULK3ALA">...2 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-format="fluid" data-ad-layout-key="-i5-j+o-30+7q" data-ad-client="ca-pub-5394123364428126" data-ad-slot="7705327600" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_10_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 445px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_10" name="aswift_10" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 445px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="445" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads(10).html" data-google-container-id="a!b" data-load-complete="true" data-google-query-id="CKaX_7Hos_4CFanJTAIdMlIBxA"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+
+			<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-item" style="position: absolute; left: 33.3325%; top: 2617.66px;">
+              <div class="x_panel">
+                <div class="x_title datalist">
+                  <h2><i class="fas fa-tags"></i> Voicetags</h2>
+                  <div class="clearfix"></div>
+                </div>
+                  <div class="row x_content row-eq-height tagdatas">
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Genshin Impact">Genshin Impact</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Bodhisattva">Bodhisattva</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="VoiceTitle About Faruzan">VoiceTitle About Faruzan</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="田村ゆかり">田村ゆかり</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="fate">fate</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Nagao Kagetora">Nagao Kagetora</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="FGO">FGO</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="ラブライブ！スクールアイドルフェスティバル">ラブライブ！スクールアイドルフェスティバル</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Ahh, the wind is perfect. Not too light, not too strong... Hehe, I bet Amber would be itching to test her limits in this weather.">Ahh, the wind is perfect. Not too light, not too strong... Hehe, I bet Amber would be itching to test her limits in this weather.</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="マギアレコード 魔法少女まどかマギカ外伝">マギアレコード 魔法少女まどかマギカ外伝</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Mordred">Mordred</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="ウマ娘">ウマ娘</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="fgo">fgo</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="国木田花丸＆黒澤ルビィ＆津島善子">国木田花丸＆黒澤ルビィ＆津島善子</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="美狄亚">美狄亚</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Lane">Lane</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="セリフ">セリフ</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="八九寺真宵">八九寺真宵</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="心配">心配</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="千歌＆梨子＆曜">千歌＆梨子＆曜</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="VoiceTitle Ally at Low HP">VoiceTitle Ally at Low HP</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="The past cannot be changed, and the future cannot be foretold. As a result, I make sure to always cherish the here and now.">The past cannot be changed, and the future cannot be foretold. As a result, I make sure to always cherish the here and now.</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="オクタヴィネル寮">オクタヴィネル寮</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="VoiceTitle When It Snows">VoiceTitle When It Snows</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="HoYoVerse">HoYoVerse</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="2年生">2年生</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="夢100">夢100</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="VoiceTitle Receiving a Gift: I">VoiceTitle Receiving a Gift: I</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="莱昂纳多・达・芬奇">莱昂纳多・达・芬奇</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Rice, meat, and dried nuts, mixed with some yogurt and roasted together... what a wonderful mix of flavors. You can feel the aroma seeping out with the steam as you cut into the crispy outside. It doesn&#39;t even take very long to make, definitely my favorite dish.">Rice, meat, and dried nuts, mixed with some yogurt and roasted together... what a wonderful mix of flavors. You can feel the aroma seeping out with the steam as you cut into the crispy outside. It doesn't even take very long to make, definitely my favorite dish.</button>
+
+                  </div>
+				  <div class="ad-area">
+<article class="media">
+<ins class="adsbygoogle" style="display: block; height: 0px;" data-ad-format="fluid" data-ad-layout-key="-i5-j+o-30+7q" data-ad-client="ca-pub-5394123364428126" data-ad-slot="7705327600" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_11_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 455px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"><iframe id="aswift_11" name="aswift_11" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 455px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="455" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads(11).html" data-google-container-id="a!c" data-load-complete="true" data-google-query-id="CKSd_7Hos_4CFSvITAIdB8QKmw"></iframe></div></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</article>
+                  </div>
+				  
+              </div>
+            </div>
+
+			<div class="row dlapp">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 buttons-box grid-item" style="position: absolute; left: 0%; top: 3423.98px;">
+					<div class="x_panel">
+						<div class="x_content">
+							<div class="row">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 appicon-cover"><img src="./VoiStock Web β_files/vt-download.png" class="img-responsive appdlicons"></div>
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 appicon-cover"><a href="https://itunes.apple.com/jp/app/id1410177477?l=ja&amp;ls=1&amp;mt=8" target="_blank"><img src="./VoiStock Web β_files/en_appstore.png" class="img-responsive appdlicons"></a></div>
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 appicon-cover"><a href="https://play.google.com/store/apps/details?id=com.voistock.stamp" target="_blank"><img src="./VoiStock Web β_files/en_googleplay.png" class="img-responsive appdlicons"></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+</div>
+	<!-- footer content -->
+        <footer>
+          <div class="pull-right">
+             ©VoiStock PTE.LTD. -Stock Voices,Change the World.-
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+	  
+    <!-- jQuery -->
+    <script src="./VoiStock Web β_files/jquery.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/jquery-ui.min.js.下载"></script>
+    <!-- Bootstrap -->
+    <script src="./VoiStock Web β_files/bootstrap.min.js.下载"></script>
+    <!-- FastClick -->
+    <script src="./VoiStock Web β_files/fastclick.js.下载"></script>
+    <!-- NProgress -->
+    <script src="./VoiStock Web β_files/nprogress.js.下载"></script>
+    <!-- PNotify -->
+    <script src="./VoiStock Web β_files/pnotify.js.下载"></script>
+    <script src="./VoiStock Web β_files/pnotify.buttons.js.下载"></script>
+    <script src="./VoiStock Web β_files/pnotify.nonblock.js.下载"></script>	
+    <!-- iCheck -->
+    <script src="./VoiStock Web β_files/icheck.min.js.下载"></script>
+    <!-- Datatables -->
+    <script src="./VoiStock Web β_files/jquery.dataTables.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/dataTables.bootstrap.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/dataTables.buttons.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/buttons.bootstrap.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/buttons.flash.js.下载"></script>
+    <script src="./VoiStock Web β_files/buttons.html5.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/buttons.print.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/buttons.colVis.js.下载"></script>
+    <script src="./VoiStock Web β_files/dataTables.fixedHeader.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/dataTables.keyTable.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/dataTables.responsive.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/responsive.bootstrap.js.下载"></script>
+    <script src="./VoiStock Web β_files/dataTables.scroller.min.js.下载"></script>
+	<script src="./VoiStock Web β_files/switchery.min.js.下载"></script>
+	<script src="./VoiStock Web β_files/jquery.tagsinput.js.下载"></script>
+    <script src="./VoiStock Web β_files/jszip.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/pdfmake.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/vfs_fonts.js.下载"></script>
+    <script src="./VoiStock Web β_files/jquery.imgFitter.js.下载"></script>
+    <script src="./VoiStock Web β_files/jquery.ui.touch-punch.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/jquery.tmpl.min.js.下载"></script>
+    <script src="./VoiStock Web β_files/jquery.cookie.js.下载"></script>
+
+	<script src="./VoiStock Web β_files/howler.min.js.下载"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="./VoiStock Web β_files/custom.js.下载"></script>
+	
+    <script src="./VoiStock Web β_files/sha.js.下载"></script>
+    <script src="./VoiStock Web β_files/apiAuth.js.下载"></script>
+    <script src="./VoiStock Web β_files/stockchange.js.下载"></script>
+    <script src="./VoiStock Web β_files/playlist.js.下载"></script>
+    <script src="./VoiStock Web β_files/copyThisUrl.js.下载"></script>
+
+    <script src="./VoiStock Web β_files/topvoicesearch.js.下载"></script>
+
+    <script src="./VoiStock Web β_files/langsetting.js.下载"></script>
+	
+	<script src="./VoiStock Web β_files/slick.min.js.下载"></script>
+<script src="./VoiStock Web β_files/imagesloaded.pkgd.min.js.下载"></script>
+<script src="./VoiStock Web β_files/masonry.pkgd.min.js.下载"></script>
+<script src="./VoiStock Web β_files/jquery.balloon.min.js.下载"></script>
+<script src="./VoiStock Web β_files/hMarquee.min.js.下载"></script>
+<script src="./VoiStock Web β_files/jquery.marquee.js.下载"></script>
+<script src="./VoiStock Web β_files/voiceplay.js.下载"></script>
+<script src="./VoiStock Web β_files/top.js.下载"></script>
+<script src="./VoiStock Web β_files/icondescription.js.下载"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./VoiStock Web β_files/js(1)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107915636-3');
+</script>
+
+<!-- iOSモーダル -->
+<div class="modal fade" id="iosModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">Can not download from iOS devices</h4>
+			</div>
+	        <div class="modal-body">
+				<span id="loginModal-body-area">
+					<div class="text-center center-block">Can not use Download from iOS devices</div>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Loginモーダル -->
+
+<!-- イベントVoiceモーダル -->
+<div class="modal fade" id="eventVoiceModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">Event Voices</h4>
+			</div>
+	        <div class="modal-body">
+				<span id="eventVoiceModal-body-area">
+					<div class="text-center center-block">You can use this voice upon code input<br>
+						<br>
+						<button type="button" class="btn btn-warning" onclick="window.location.href=&#39;/en/code&#39;">To code input page</button>
+					</div>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /イベントモーダル -->
+
+<p class="copysrc"><span class="thisUrl">https://www.voistock.com/en/</span></p>
+<p class="copysrc"><span class="thisCode"></span></p>
+<div id="loginsuccess" style="display: none;"><p>Logged in</p></div>
+</div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_12_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_12" name="aswift_12" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./VoiStock Web β_files/ads(12).html" data-google-container-id="a!d" data-load-complete="true"></iframe></div></ins><tester id="playListTags_tag_autosize_tester" style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 3839.09px; left: 151px; display: none;">ASMR voice<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 33px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 35px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 3901.09px; left: 161.234px; display: none;">ASMR voice<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 33px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 35px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 3954.09px; left: 151px; display: none;">ASMR voice<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 33px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 35px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 4016.09px; left: 161.234px; display: none;">ASMR voice<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 33px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 35px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 4069.09px; left: 151px; display: none;">ASMR voice<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 33px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 35px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 4131.09px; left: 161.234px; display: none;">ASMR voice<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 33px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 35px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 3839.09px; left: 648px; display: none;">ASMR voice<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 33px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 35px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 3901.09px; left: 658.234px; display: none;">ASMR voice<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 33px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 35px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 3954.09px; left: 648px; display: none;">ASMR voice<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 33px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 35px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 4016.09px; left: 658.234px; display: none;">ASMR voice<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 33px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 35px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 4069.09px; left: 648px; display: none;">ASMR voice<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 33px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 35px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 4131.09px; left: 658.234px; display: none;">ASMR voice<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 33px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 35px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 3898.22px; left: 94.5px; display: none;">Google Speech Recognition<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 74.5px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 76.5px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 4013.22px; left: 94.5px; display: none;">Google Speech Recognition<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 74.5px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 76.5px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 4128.22px; left: 94.5px; display: none;">Google Speech Recognition<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 74.5px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 76.5px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 3898.22px; left: 591.5px; display: none;">Google Speech Recognition<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 74.5px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 76.5px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 4013.22px; left: 591.5px; display: none;">Google Speech Recognition<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 74.5px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 76.5px;"></div></div><div style="font-size: 0.7rem; min-width: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(212, 212, 212, 0.4); border-radius: 3px; box-shadow: rgb(85, 85, 85) 2px 2px 4px; color: rgb(238, 238, 238); background-color: rgb(17, 17, 17); opacity: 0.85; z-index: 32767; text-align: left; visibility: visible; position: absolute; top: 4128.22px; left: 591.5px; display: none;">Google Speech Recognition<div style="position: absolute; height: 0px; width: 0px; border-width: 8px 5px 0px; border-style: solid; border-color: rgba(212, 212, 212, 0.4) transparent transparent; border-image: initial; top: 22px; left: 74.5px;"></div><div style="position: absolute; height: 0px; width: 0px; border-width: 6px 3px 0px; border-style: solid; border-color: rgb(17, 17, 17) transparent transparent; border-image: initial; top: 22px; left: 76.5px;"></div></div><iframe src="./VoiStock Web β_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./VoiStock Web β_files/zrt_lookup.html" style="display: none;"></iframe></html>
