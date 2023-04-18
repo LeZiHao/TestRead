@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/en/favicon.ico">
+
+<meta property="og:type" content="website">
+<meta name="description" content="Voiceで遊ぼう!Playlistsを作ったり、あなたVoiceをデータベースに追加してシェアすることもできるよ!たくさんの声を集めたVoiceデータベースのVoiStockでは声を使った新しい遊び方を提案。">
+<meta name="keywords" content="Voice,声,Voice Actor,Anime,Stock,Playlists,VoiStock,VoiStamp,Voiceデータベース,VoiStock,Games,アイドル,キャラ,録音,Animeキャラ,音声,Anime名言,中二病,まとめ,anime,quotes,japanese,phrases,CV,character,voice,playlist,actress,actor,words,">
+<meta name="author" content="VoiStock">
+<meta name="copyright" content="VoiStock">
+<meta property="og:site_name" content="VoiStock">
+<meta property="og:title" content="VoiStock β">
+<meta property="og:description" content="Voiceで遊ぼう!Playlistsを作ったり、あなたVoiceをデータベースに追加してシェアすることもできるよ!たくさんの声を集めたVoiceデータベースのVoiStockでは声を使った新しい遊び方を提案。">
+<meta property="og:url" content="https://www.voistock.com/en/">
+<meta property="og:image" content="https://www.voistock.com/en/images/logo-sns.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="fb:app_id" content="177623579685517">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@VoiStockPteLtd">
+    <title>VoiStock Web β</title>
+
+    <!-- Bootstrap -->
+    <link href="/en/vendors/bootstrap/dist/css/bootstrap.min.css?2023041902" rel="stylesheet">
+    <!-- Font Awesome -->
+	<link href="/en/vendors/font-awesome/css/all.min.css" rel="stylesheet">
+	<link href="/en/vendors/_font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="/en/vendors/nprogress/nprogress.css" rel="stylesheet">
+	<!-- PNotify -->
+	<link href="/en/vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+	<link href="/en/vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+	<link href="/en/vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">	
+	
+    <!-- iCheck -->
+    <link href="/en/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="/en/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="/en/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="/en/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="/en/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="/en/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <link href="/en/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+
+    <!-- emotion -->
+    <link href="/en/css/emotion.css?2023041902" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="/en/build/css/custom.css?2023041902Apr" rel="stylesheet">
+    <link href="/en/css/all.css?2023041902" rel="stylesheet">
+	
+<link href="/en/js/slick/slick.css" rel="stylesheet">
+<link href="/en/js/slick/slick-theme.css" rel="stylesheet">
+<link href="css/top.css?2023041902" rel="stylesheet">
+<link href="css/emotion.css?2023041902" rel="stylesheet">	
+	<script type="javascript">
+		loginsuccess="";
+	</script>
+	
+  </head>
+  <body class="nav-sm">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+				<a href="/en/" class="site_title"><img src="/en/images/logomark.png" width="45px"> <span>VoiStock β</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <br />            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>Functions</h3>
+                <ul class="nav side-menu">
+                  <li><a href="/en/"><i class="fa fa-asterisk"></i> Top Page </a></li>
+                  <li><a href="/en/voicelist/"><i class="fa fa-microphone"></i> Public Voice List </a></li>
+				  
+                  <li><a href="/en/playlist/search.php"><i class="fa fa-list"></i>Search for Playlists</a></li>
+				  
+                  <li><a href="/en/stocksearch/"><i class="fa fa-search"></i> Search for Stocks </a></li>
+                  <li><a href="/en/login/"><i class="glyphicon glyphicon-log-in listicon"></i> Stock Login </a></li>
+                  <li><a href="/en/code/"><i class="fa fa-edit"></i> Code Input </a></li>
+                </ul>
+              </div>
+				
+				
+				
+              <div class="menu_section">
+                <h3>Etc.</h3>
+                <ul class="nav side-menu">
+                  <li><a href="/en/information/"><i class="fa fa-info-circle"></i> Notice </a></li>
+                  <li><a><i class="fas fa-life-ring"></i> Support <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><!--<a href="/support/howto.php">--><a href="javascript:void(0)">User Guide <span class="label label-success pull-right">Coming Soon</span></a></li>
+                      <li><!--<a href="/support/faq.php">--><a href="javascript:void(0)">FAQ <span class="label label-success pull-right">Coming Soon</span></a></li>
+                      <li><a href="/en/support/inquiry/">Contact us</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="/en/privacy/"><i class="fas fa-flag"></i> Privacy Policy </a></li>
+                  <li><a href="/en/terms/"><i class="fas fa-check"></i> Terms of Service </a></li>
+                  <li><a href="/en/about/" target="_blank"><i class="fa fa-comment"></i> About us </a></li>
+                </ul>
+              </div>
+				
+				
+              <div class="menu_section">
+                <h3>Share</h3>
+                <ul class="nav side-menu snsiconmenu">
+					<li class="text-center"><a href="javascript:window.open('https://www.facebook.com/sharer.php?u='+encodeURIComponent(location.href),'sharewindow','width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!');"><button type="button" class="btn btn-default snsbtn"  style="background: #0D65D3;"><i class="fab fa-facebook snsicon"></i></button></a></li>
+					
+					
+					<li class="text-center"><a href="javascript:window.open('https://twitter.com/share?text='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(location.href),'sharewindow','width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!');"><button type="button" class="btn btn-default snsbtn" style="background: #1DA1F2;"><i class="fab fa-twitter snsicon"></i></button></a></li>
+					<li class="text-center"><a href="javascript:window.open('https://line.me/R/msg/text/?'+encodeURIComponent(document.title)+'%20'+encodeURIComponent(location.href),'sharewindow','width=550, height=520, personalbar=0, toolbar=0, scrollbars=1, resizable=!');"><button type="button" class="btn btn-default snsbtn" style="background: #00B900;"><img src="/en/img/line-logo.png" class="line-icon-img snsicon"></button></a></li>
+					<li class="text-center"><a><button type="button" class="btn btn-default copyurl snsbtn" id="" ><i class="far fa-copy snsicon"></i></button></a></li>
+                </ul>
+              </div>
+				
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Login" href="/en/login">
+                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div><script>
+	pagelang='en';
+</script>
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+				
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="langbox dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+					  <!--言語設定-->
+                                          言語設定
+                    <span class="fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu dropdown-langmenu pull-right">
+                    <li><a href="/ja/"> 日本語</a></li>
+                    <li><a href="/en/"><i class="fas fa-check"></i> English</a></li>
+					<li class="divider"></li>
+                    <li>
+                            VoiceText Translate
+                            <span class="pull-right voicetext-switch">
+                                    <label><span class="translate-status">OFF</span><input type="checkbox" class="js-switch translate-switch" /></label>
+                            </span>
+                    </li>
+                  </ul>
+					
+                </li>
+				  
+				  
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+					  <img src="/en/images/user.png" alt="">
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="/en/login/"><i class="glyphicon glyphicon-log-in pull-right"></i> Login</a></li>
+                    <li><a href="/en/login/adduser.php"><i class="fas fa-pencil-alt pull-right"></i> Sign up</a></li>
+                  </ul>					
+                </li>
+				
+
+				
+                <li class="">
+                  <div class="input-group top_search">
+                    <input type="text" class="form-control menusearch-word" placeholder="Search for Voices...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default menusearch" type="button">検索</button>
+                    </span>
+                  </div>
+                </li>
+				
+                <li class="">
+                    <div class="input-group upload-icon-area">
+                        <a href="/en/upload/"><img src="/en/img/stock_en.png" class="img-responsive upload-icon" alt="voice upload"></a>
+                    </div>
+                </li>
+				
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+		<div class="clearfix"></div>
+		<script>
+	uid = '';
+	apidom = 'https://api.voistock.com';	
+</script>
+        <div class="right_col" role="main">
+			<div class="row top_tiles">
+			</div>
+          <!-- バナーとPlay回数外してみる -->  
+<!--			<div class="row top_tiles">
+				<div class="animated col-lg-8 col-md-8 col-sm-12 col-xs-12">
+					<ul class="top_slick"  width="90%">
+						<li width="100%"><a href="code/"><img src="images/topbanner.png?202304190218" class="slide-image" width="100%"></a></li>
+						<li width="100%"><a href="quiz_redirect.php" target="_blank"><img src="images/quizBanner_ver.png?202304190218" class="slide-image" width="100%"></a></li>
+						<li width="100%"><a href="voistock_app_redirect.php" target="_blank"><img src="images/voistockAppBanner.png?202304190218" class="slide-image" width="100%"></a></li>
+					</ul>
+				</div>
+				
+				<div class="animated flipInY col-lg-4 col-md-4 col-sm-12 col-xs-12 playcount-box">
+				  <div class="tile-stats">
+					<div class="icon"><i class="fa fa-caret-square-o-right top-catch-icon"></i></div>
+					<div class="count">0</div>
+					<h3>Play count of yesterday</h3>
+					<p>04月18日のPlay回数</p>
+				  </div>
+				</div>
+				
+			</div>-->
+			
+			
+        <div class="row topcontentsArea">
+            
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-item">
+              <div class="x_panel">
+                <div class="x_title datalist">
+                  <h2><i class="fa fa-list"></i> 人気Playlists</h2>
+					 <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+                  <div class="clearfix"></div>
+                </div>
+				  
+                  <div class="x_content">
+	
+                    <article class="media event">
+						<div class="playlisticon"><a href="playlist/detail.php?pk=F92FKEBH3"><img class="pull-left" src="https://api.voistock.com/playlistImage/playlistImage.php?playlistId=613ee0db3e41863c337a5852"></a></div>
+                      <div class="media-body">
+                        <a class="title playlistname" href="playlist/detail.php?pk=F92FKEBH3">茅野愛さんの誕生日記念Playlists！</a>
+						<br>
+                        <a class="voicenum" href="playlist/detail.php?pk=F92FKEBH3">25 Voice</a>
+						<br>
+                            <i class="fas fa-play"><span class="playNum">20K</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="playlisticon"><a href="playlist/detail.php?pk=E5P5D8ANQ"><img class="pull-left" src="https://api.voistock.com/playlistImage/playlistImage.php?playlistId=5e96e9633e418626c703d7d3"></a></div>
+                      <div class="media-body">
+                        <a class="title playlistname" href="playlist/detail.php?pk=E5P5D8ANQ">ゴセン</a>
+						<br>
+                        <a class="voicenum" href="playlist/detail.php?pk=E5P5D8ANQ">11 Voice</a>
+						<br>
+                            <i class="fas fa-play"><span class="playNum">1K</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="playlisticon"><a href="playlist/detail.php?pk=GTNSDA24L"><img class="pull-left" src="https://api.voistock.com/playlistImage/playlistImage.php?playlistId=5d42b3063e4186180544d9ef"></a></div>
+                      <div class="media-body">
+                        <a class="title playlistname" href="playlist/detail.php?pk=GTNSDA24L">【ラブライブ！】ふたりの秘密・園田海未Voice集</a>
+						<br>
+                        <a class="voicenum" href="playlist/detail.php?pk=GTNSDA24L">10 Voice</a>
+						<br>
+                            <i class="fas fa-play"><span class="playNum">52K</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="playlisticon"><a href="playlist/detail.php?pk=BCWPU3HNQ"><img class="pull-left" src="img/white.png"></a></div>
+                      <div class="media-body">
+                        <a class="title playlistname" href="playlist/detail.php?pk=BCWPU3HNQ">あ</a>
+						<br>
+                        <a class="voicenum" href="playlist/detail.php?pk=BCWPU3HNQ">1 Voice</a>
+						<br>
+                            <i class="fas fa-play"><span class="playNum">1K</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="playlisticon"><a href="playlist/detail.php?pk=K2L2BA545"><img class="pull-left" src="https://api.voistock.com/playlistImage/playlistImage.php?playlistId=61c1abbf3e41863fe552bca2"></a></div>
+                      <div class="media-body">
+                        <a class="title playlistname" href="playlist/detail.php?pk=K2L2BA545">Gorou voice lines Korean!</a>
+						<br>
+                        <a class="voicenum" href="playlist/detail.php?pk=K2L2BA545">19 Voice</a>
+						<br>
+                            <i class="fas fa-play"><span class="playNum">14</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="playlisticon"><a href="playlist/detail.php?pk=9VU5QX7G5"><img class="pull-left" src="https://api.voistock.com/playlistImage/playlistImage.php?playlistId=607ce5543e41860b960b5cb2"></a></div>
+                      <div class="media-body">
+                        <a class="title playlistname" href="playlist/detail.php?pk=9VU5QX7G5">「2021年5月Public決定『機動戦士ガンダム 閃光のハサウェイ』」ギギ・アンダルシア</a>
+						<br>
+                        <a class="voicenum" href="playlist/detail.php?pk=9VU5QX7G5">3 Voice</a>
+						<br>
+                            <i class="fas fa-play"><span class="playNum">662</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                      </div>
+                    </article>
+
+                    <article class="media event">
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-format="fluid"
+                             data-ad-layout-key="-i5-j+o-30+7q"
+                             data-ad-client="ca-pub-5394123364428126"
+                             data-ad-slot="7705327600"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>				
+                    </article>
+
+                  </div>
+              </div>
+            </div>	
+
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-item  grid-sizer">
+              <div class="x_panel">
+                <div class="x_title datalist">
+                  <h2><i class="fa fa-child"></i> Popular Voices</h2>
+					 <button type="button" class="btn btn-xs btn-info pull-right btn-voicesearch"><i class="fa fa-search"></i>Search for Voices</button>
+                  <div class="clearfix"></div>
+                </div>
+				  
+                  <div class="x_content">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5bc6f1663e4186217d07b20c"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bc6f1663e4186217d07b20c" id="voice5bc6f1663e4186217d07b20c" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="voicelist/voice.php?vid=5bc6f1663e4186217d07b20c"><p class="textbody">フッ…己を…高めたい</p><p class="mq">フッ…己を…高めたい</p></a>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="/userprof/index.php?uk=23L-NLM-ZGS"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5ac43f1e3e41860e7b579552"></div></a>
+						<span class="marginleft5 stockname">カラ松（おそ松さん）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">146,016</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>                        </span>
+                    </div>
+                    </article>		                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5b6152483e41860b25231b95"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5b6152483e41860b25231b95" id="voice5b6152483e41860b25231b95" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="voicelist/voice.php?vid=5b6152483e41860b25231b95"><p class="textbody">どう？これで注目度パッチリでしょ？</p><p class="mq">どう？これで注目度パッチリでしょ？</p></a>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="/userprof/index.php?uk=23L-NLM-ZGS"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5ac43f1e3e41860e7b579552"></div></a>
+						<span class="marginleft5 stockname">涼宮ハルヒ（涼宮ハルヒの憂鬱）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">121,641</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>                        </span>
+                    </div>
+                    </article>		                    <article class="media event voiceplate">
+                    <div class="voicePostContents happyVoice">
+						<div class="playicon text-left voiceplay" data-vid="5cd95c8e3e41866cd7419ed2"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5cd95c8e3e41866cd7419ed2" id="voice5cd95c8e3e41866cd7419ed2" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="voicelist/voice.php?vid=5cd95c8e3e41866cd7419ed2"><p class="textbody">こいつは俺の仲間になったんだ！なってねえよ！！</p><p class="mq">こいつは俺の仲間になったんだ！なってねえよ！！</p></a>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="/userprof/index.php?uk=B9Q-8AH-9SX"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5acf25b5cfbe10034e05b6d5"></div></a>
+						<span class="marginleft5 stockname">モンキー・D・ルフィ（ONE PIECE）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">122,071</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>                        </span>
+                    </div>
+                    </article>		                    <article class="media event voiceplate">
+                    <div class="voicePostContents angryVoice">
+						<div class="playicon text-left voiceplay" data-vid="5be954303e41860d855f4552"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5be954303e41860d855f4552" id="voice5be954303e41860d855f4552" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="voicelist/voice.php?vid=5be954303e41860d855f4552"><p class="textbody">戦うんじゃない！勝つんだ！！</p><p class="mq">戦うんじゃない！勝つんだ！！</p></a>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="/userprof/index.php?uk=7DX-A89-MXR"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5ae15c4f3e418669fc21ae82"></div></a>
+						<span class="marginleft5 stockname">キリト（ソードアート・オンライン）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">284,241</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>                        </span>
+                    </div>
+                    </article>		                    <article class="media event voiceplate">
+                    <div class="voicePostContents cuteVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bc95f203e4186016b4f7ab4"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bc95f203e4186016b4f7ab4" id="voice5bc95f203e4186016b4f7ab4" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="voicelist/voice.php?vid=5bc95f203e4186016b4f7ab4"><p class="textbody">サザエでございます</p><p class="mq">サザエでございます</p></a>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="/userprof/index.php?uk=7AZ-ALC-S9L"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5ae15b3a3e418666f344b489"></div></a>
+						<span class="marginleft5 stockname">フグ田サザエ（サザエさん）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">135,440</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>                        </span>
+                    </div>
+                    </article>		                    <article class="media event voiceplate">
+                    <div class="voicePostContents surpriseVoice">
+						<div class="playicon text-left voiceplay" data-vid="5a9515653e41862c3c0afa32"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5a9515653e41862c3c0afa32" id="voice5a9515653e41862c3c0afa32" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="voicelist/voice.php?vid=5a9515653e41862c3c0afa32"><p class="textbody">抜けたあ！</p><p class="mq">抜けたあ！</p></a>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="/userprof/index.php?uk=XGT-3GZ-DXT"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5c6f6e160e3bb90c1d887df8"></div></a>
+						<span class="marginleft5 stockname">信（キングダム）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">98,414</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>                        </span>
+                    </div>
+                    </article>		
+<article class="media event voiceplate">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-i5-j+o-30+7q"
+     data-ad-client="ca-pub-5394123364428126"
+     data-ad-slot="7705327600"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</article>
+                  </div>
+              </div>
+            </div>
+
+            		
+
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-item">
+              <div class="x_panel">
+                <div class="x_title datalist">
+					<h2><i class="fa fa-comment-o"></i> Popular Stocks</h2>
+					 <button type="button" class="btn btn-xs btn-info pull-right btn-stocksearch"><i class="fa fa-search"></i>Search for Stocks</button>
+                  <div class="clearfix"></div>
+                </div>
+				  
+                  <div class="x_content">
+	
+                    <article class="media event">
+						<div class="usericon"><a href="userprof/?uk=DVG-NDZ-XRD"><img class="pull-left" src="https://api.voistock.com/imgsample/image.php?userId=5c87581a3e418633892f9e05"></a></div>
+                      <div class="media-body">
+                        <a class="title" href="userprof/?uk=DVG-NDZ-XRD">JustC-3</a>
+                        <p><span> 80Voice</span></p>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="usericon"><a href="userprof/?uk=P4T-9DR-WVM"><img class="pull-left" src="https://api.voistock.com/imgsample/image.php?userId=5c6cad193e41860e457567e1"></a></div>
+                      <div class="media-body">
+                        <a class="title" href="userprof/?uk=P4T-9DR-WVM">CoLoN: </a>
+                        <p><span> 90Voice</span></p>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="usericon"><a href="userprof/?uk=V4M-F22-VPZ"><img class="pull-left" src="https://stg-api.voistock.com/imgsample/image.php?userId=5c9378af3e41867f1c3e0843"></a></div>
+                      <div class="media-body">
+                        <a class="title" href="userprof/?uk=V4M-F22-VPZ">Prista</a>
+                        <p><span> 40Voice</span></p>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="usericon"><a href="userprof/?uk=DPU-7X7-9GU"><img class="pull-left" src="https://api.voistock.com/imgsample/image.php?userId=5c8a1e493e4186120c43d865"></a></div>
+                      <div class="media-body">
+                        <a class="title" href="userprof/?uk=DPU-7X7-9GU">話題速報</a>
+                        <p><span> 1,350Voice</span></p>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="usericon"><a href="userprof/?uk=HCG-7SG-7A9"><img class="pull-left" src="https://api.voistock.com/imgsample/image.php?userId=5f58555b3e4186397d1e3822"></a></div>
+                      <div class="media-body">
+                        <a class="title" href="userprof/?uk=HCG-7SG-7A9">B</a>
+                        <p><span> 2,010Voice</span></p>
+                      </div>
+                    </article>
+	
+                    <article class="media event">
+						<div class="usericon"><a href="userprof/?uk=QB9-ZGV-2HU"><img class="pull-left" src="https://api.voistock.com/imgsample/image.php?userId=5c7e0ca63e41865fe01e5be3"></a></div>
+                      <div class="media-body">
+                        <a class="title" href="userprof/?uk=QB9-ZGV-2HU">恵ファンクラブ</a>
+                        <p><span> 631Voice</span></p>
+                      </div>
+                    </article>
+                    <article class="media event">
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-format="fluid"
+                             data-ad-layout-key="-i5-j+o-30+7q"
+                             data-ad-client="ca-pub-5394123364428126"
+                             data-ad-slot="7705327600"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>				
+                    </article>					  
+                  </div>
+              </div>
+            </div>
+			
+			
+
+			
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-item">
+              <div class="x_panel">
+                <div class="x_title datalist">
+					<h2><img src="img/newicon.png" class="top-new-icon"> 最新Voice</h2>
+					 <button type="button" class="btn btn-xs btn-info pull-right btn-voicesearch"><i class="fa fa-search"></i>Search for Voices</button>
+                  <div class="clearfix"></div>
+                </div>
+				  
+                  <div class="x_content">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="mqarea">
+						<div class="playicon text-left voiceplay" data-vid="5af0163a3e41862a816e7a77"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5af0163a3e41862a816e7a77" id="voice5af0163a3e41862a816e7a77" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="voicelist/voice.php?vid=5af0163a3e41862a816e7a77"><p class="textbody">おはよう！</p><p class="mq">おはよう！</p></a>
+						</div>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="/userprof/index.php?uk=7AZ-ALC-S9L"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5ae15b3a3e418666f344b489"></div></a>
+						<span class="marginleft5 stockname">ドラえもん（ドラえもん）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">168,278</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>                        </span>
+                    </div>
+                    </article>
+						
+						                    <article class="media event voiceplate">
+                    <div class="voicePostContents cuteVoice">
+						<div class="mqarea">
+						<div class="playicon text-left voiceplay" data-vid="5bd019823e418613d30ff0a2"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bd019823e418613d30ff0a2" id="voice5bd019823e418613d30ff0a2" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="voicelist/voice.php?vid=5bd019823e418613d30ff0a2"><p class="textbody">失ったものばかり数えるな！ないものはない！お前にまだ残っているものはなんじゃ？</p><p class="mq">失ったものばかり数えるな！ないものはない！お前にまだ残っているものはなんじゃ？</p></a>
+						</div>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="/userprof/index.php?uk=XGT-3GZ-DXT"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5c6f6e160e3bb90c1d887df8"></div></a>
+						<span class="marginleft5 stockname">ジンベエ（ONE PIECE）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">6,143</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>                        </span>
+                    </div>
+                    </article>
+						
+						                    <article class="media event voiceplate">
+                    <div class="voicePostContents sexyVoice">
+						<div class="mqarea">
+						<div class="playicon text-left voiceplay" data-vid="5bced3c53e41865968645f92"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bced3c53e41865968645f92" id="voice5bced3c53e41865968645f92" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="voicelist/voice.php?vid=5bced3c53e41865968645f92"><p class="textbody">は！ちょ、ちょっと。やっぱあんた、なんか目つきが怪しいよ</p><p class="mq">は！ちょ、ちょっと。やっぱあんた、なんか目つきが怪しいよ</p></a>
+						</div>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="/userprof/index.php?uk=QB9-ZGV-2HU"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5c7e0ca63e41865fe01e5be3"></div></a>
+						<span class="marginleft5 stockname">澤村・スペンサー・英梨々（冴えない彼女の育てかた）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">30,037</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>                        </span>
+                    </div>
+                    </article>
+						
+						                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="mqarea">
+						<div class="playicon text-left voiceplay" data-vid="5bcd96473e418615362f9da1"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bcd96473e418615362f9da1" id="voice5bcd96473e418615362f9da1" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="voicelist/voice.php?vid=5bcd96473e418615362f9da1"><p class="textbody">ぱないのー！</p><p class="mq">ぱないのー！</p></a>
+						</div>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="/userprof/index.php?uk=XGT-3GZ-DXT"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5c6f6e160e3bb90c1d887df8"></div></a>
+						<span class="marginleft5 stockname">忍野忍（物語シリーズ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">5,589</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>                        </span>
+                    </div>
+                    </article>
+						
+						                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="mqarea">
+						<div class="playicon text-left voiceplay" data-vid="5b3085b23e4186672037025e"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5b3085b23e4186672037025e" id="voice5b3085b23e4186672037025e" preload="none"></audio></span></div>
+                        <a class="bal-text textdisplay" href="voicelist/voice.php?vid=5b3085b23e4186672037025e"><p class="textbody">やぁ！</p><p class="mq">やぁ！</p></a>
+						</div>
+                    </div>
+                    <div class="voiceDetails">
+                        <a href="/userprof/index.php?uk=U6C-8AH-9SN"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5acf260ccfbe10034e05b6d6"></div></a>
+						<span class="marginleft5 stockname">ジャック・ザ・リッパー（Fate）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						
+                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">8,631</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>                        </span>
+                    </div>
+                    </article>
+						
+						<article class="media event voiceplate">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-i5-j+o-30+7q"
+     data-ad-client="ca-pub-5394123364428126"
+     data-ad-slot="7705327600"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+					  
+                  </div>
+              </div>
+            </div>
+
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="/en/playlist/detail.php?pk=CHM8WLNXA">
+                              <img src="https://api.voistock.com/playlistImage/playlistImage.php?playlistId=5c643ffb3e41865870282380" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">マギレコ羽川翼Voice</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 562,284 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 4 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 9 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents angryVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c6395cd3e41863825159542"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c6395cd3e41863825159542" id="voice5c6395cd3e41863825159542" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5c6395cd3e41863825159542"><p class="textbody">羽川翼。ちょっと真面目なだけが取り柄の普通の女の子。クラスの委員長で、、、はっ！廊下を走っちゃダメ！！もー先生に言いつけちゃうよ！</p></a><p class="mq">羽川翼。ちょっと真面目なだけが取り柄の普通の女の子。クラスの委員長で、、、はっ！廊下を走っちゃダメ！！もー先生に言いつけちゃうよ！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=TQH-ZCE-BNF"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5a8ad2763e4186793919e602"></div></a>
+						<span class="marginleft5 stockname">羽川翼（物語シリーズ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">62,019</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents negativeVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c63956e3e41863693354de4"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c63956e3e41863693354de4" id="voice5c63956e3e41863693354de4" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5c63956e3e41863693354de4"><p class="textbody">私の武器は火炎瓶よ。私は全部忘れてしまいたいという願いで魔法少女になったらしいの。。でも、何かを燃やすたびに記憶がなくなってしまうみたいで、何を忘れたかったのかも、忘れてしまったんだよね。</p></a><p class="mq">私の武器は火炎瓶よ。私は全部忘れてしまいたいという願いで魔法少女になったらしいの。。でも、何かを燃やすたびに記憶がなくなってしまうみたいで、何を忘れたかったのかも、忘れてしまったんだよね。</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=TQH-ZCE-BNF"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5a8ad2763e4186793919e602"></div></a>
+						<span class="marginleft5 stockname">羽川翼（物語シリーズ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">61,985</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents cuteVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c6395413e4186381a0fd432"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c6395413e4186381a0fd432" id="voice5c6395413e4186381a0fd432" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5c6395413e4186381a0fd432"><p class="textbody">女の子の届けものです</p></a><p class="mq">女の子の届けものです</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=TQH-ZCE-BNF"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5a8ad2763e4186793919e602"></div></a>
+						<span class="marginleft5 stockname">羽川翼（物語シリーズ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">64,858</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="/en/playlist/detail.php?pk=CHM8WLNXA">...6 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-i5-j+o-30+7q"
+     data-ad-client="ca-pub-5394123364428126"
+     data-ad-slot="7705327600"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="/en/playlist/detail.php?pk=WMM5ZLU5S">
+                              <img src="https://api.voistock.com/playlistImage/playlistImage.php?playlistId=5c6fba863e418655bb31d912" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">ピカチュウ鳴き声</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 84,414 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 6 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 6 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents happyVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bf0dfb23e41861c9f793412"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bf0dfb23e41861c9f793412" id="voice5bf0dfb23e41861c9f793412" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5bf0dfb23e41861c9f793412"><p class="textbody">ピカピカー</p></a><p class="mq">ピカピカー</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=7DX-A89-MXR"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5ae15c4f3e418669fc21ae82"></div></a>
+						<span class="marginleft5 stockname">ピカチュウ（ポケットモンスター ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">14,406</span></i>
+                            <i class="fas fa-heart"><span class="favNum">4</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents happyVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bf0dfb23e41861c9f793413"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bf0dfb23e41861c9f793413" id="voice5bf0dfb23e41861c9f793413" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5bf0dfb23e41861c9f793413"><p class="textbody">ピカチュウ！</p></a><p class="mq">ピカチュウ！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=7DX-A89-MXR"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5ae15c4f3e418669fc21ae82"></div></a>
+						<span class="marginleft5 stockname">ピカチュウ（ポケットモンスター ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">14,315</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents happyVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bf0dfb23e41861c9f793414"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bf0dfb23e41861c9f793414" id="voice5bf0dfb23e41861c9f793414" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5bf0dfb23e41861c9f793414"><p class="textbody">ピカチュウー</p></a><p class="mq">ピカチュウー</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=7DX-A89-MXR"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5ae15c4f3e418669fc21ae82"></div></a>
+						<span class="marginleft5 stockname">ピカチュウ（ポケットモンスター ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">15,384</span></i>
+                            <i class="fas fa-heart"><span class="favNum">3</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="/en/playlist/detail.php?pk=WMM5ZLU5S">...3 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-i5-j+o-30+7q"
+     data-ad-client="ca-pub-5394123364428126"
+     data-ad-slot="7705327600"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="/en/playlist/detail.php?pk=9VD3EFVR6">
+                              <img src="https://api.voistock.com/playlistImage/playlistImage.php?playlistId=5c7368e63e418648af73dced" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">月火ちゃん、記憶がトビウオ！</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 4,063,863 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 7 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 109 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5bbf18aa3e41861b8f1878e4"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bbf18aa3e41861b8f1878e4" id="voice5bbf18aa3e41861b8f1878e4" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5bbf18aa3e41861b8f1878e4"><p class="textbody">厳しいねー</p></a><p class="mq">厳しいねー</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=TY3-59F-A7A"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5aa775d83e41864f1a6645b3"></div></a>
+						<span class="marginleft5 stockname">阿良々木月火（物語シリーズ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">35,122</span></i>
+                            <i class="fas fa-heart"><span class="favNum">3</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5aebb8ed3e4186189915a724"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5aebb8ed3e4186189915a724" id="voice5aebb8ed3e4186189915a724" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5aebb8ed3e4186189915a724"><p class="textbody">二度寝するようなお兄ちゃんは死んでいいに決まってるじゃない</p></a><p class="mq">二度寝するようなお兄ちゃんは死んでいいに決まってるじゃない</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=TRF-SXC-BUA"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=defaultProfile"></div></a>
+						<span class="marginleft5 stockname">阿良々木月火（物語シリーズ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">37,965</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5aebb8ed3e4186189915a726"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5aebb8ed3e4186189915a726" id="voice5aebb8ed3e4186189915a726" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5aebb8ed3e4186189915a726"><p class="textbody">死ねばいい。死ねばいいんだ。死ねばいいんだ！</p></a><p class="mq">死ねばいい。死ねばいいんだ。死ねばいいんだ！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=TRF-SXC-BUA"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=defaultProfile"></div></a>
+						<span class="marginleft5 stockname">阿良々木月火（物語シリーズ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">35,143</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="/en/playlist/detail.php?pk=9VD3EFVR6">...106 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-i5-j+o-30+7q"
+     data-ad-client="ca-pub-5394123364428126"
+     data-ad-slot="7705327600"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="/en/playlist/detail.php?pk=3PCB6DC5Z">
+                              <img src="https://api.voistock.com/playlistImage/playlistImage.php?playlistId=5c89fa933e41863ac4056e93" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">釘宮理恵うるさい無限ループできるPlaylists</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 2,288,724 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 2 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 24 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents angryVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c885f723e418676a2692512"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c885f723e418676a2692512" id="voice5c885f723e418676a2692512" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5c885f723e418676a2692512"><p class="textbody">うるさい、うるさい、うるさーい！</p></a><p class="mq">うるさい、うるさい、うるさーい！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=7DX-A89-MXR"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5ae15c4f3e418669fc21ae82"></div></a>
+						<span class="marginleft5 stockname">里見灯花（まどか☆マギカ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">95,536</span></i>
+                            <i class="fas fa-heart"><span class="favNum">3</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents cuteVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c89ff1f3e41864b175c2c08"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c89ff1f3e41864b175c2c08" id="voice5c89ff1f3e41864b175c2c08" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5c89ff1f3e41864b175c2c08"><p class="textbody">うるさいうるさいうるさーい！！</p></a><p class="mq">うるさいうるさいうるさーい！！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=7DX-A89-MXR"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5ae15c4f3e418669fc21ae82"></div></a>
+						<span class="marginleft5 stockname">里見灯花（まどか☆マギカ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">95,191</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents angryVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c885f723e418676a2692512"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c885f723e418676a2692512" id="voice5c885f723e418676a2692512" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5c885f723e418676a2692512"><p class="textbody">うるさい、うるさい、うるさーい！</p></a><p class="mq">うるさい、うるさい、うるさーい！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=7DX-A89-MXR"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5ae15c4f3e418669fc21ae82"></div></a>
+						<span class="marginleft5 stockname">里見灯花（まどか☆マギカ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">95,536</span></i>
+                            <i class="fas fa-heart"><span class="favNum">3</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="/en/playlist/detail.php?pk=3PCB6DC5Z">...21 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-i5-j+o-30+7q"
+     data-ad-client="ca-pub-5394123364428126"
+     data-ad-slot="7705327600"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="/en/playlist/detail.php?pk=CDJTWBVA3">
+                              <img src="https://api.voistock.com/playlistImage/playlistImage.php?playlistId=5c6fc10f3e41866bc8022947" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">マギレコ 千石撫子Voice</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 896,228 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 6 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 71 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents emotionNotSelected">
+						<div class="playicon text-left voiceplay" data-vid="5bac670a3e4186147772bf95"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bac670a3e4186147772bf95" id="voice5bac670a3e4186147772bf95" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5bac670a3e4186147772bf95"><p class="textbody">せーのっ</p></a><p class="mq">せーのっ</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=TQH-ZCE-BNF"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5a8ad2763e4186793919e602"></div></a>
+						<span class="marginleft5 stockname">千石撫子（物語シリーズ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">11,287</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents cuteVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bac62a03e41867ccc323fef"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bac62a03e41867ccc323fef" id="voice5bac62a03e41867ccc323fef" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5bac62a03e41867ccc323fef"><p class="textbody">ぜんぜんぜんぜんぜぜぜんぜん！！</p></a><p class="mq">ぜんぜんぜんぜんぜぜぜんぜん！！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=TQH-ZCE-BNF"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5a8ad2763e4186793919e602"></div></a>
+						<span class="marginleft5 stockname">千石撫子（物語シリーズ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">11,211</span></i>
+                            <i class="fas fa-heart"><span class="favNum">4</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents cuteVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bac7b973e418623906c6384"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bac7b973e418623906c6384" id="voice5bac7b973e418623906c6384" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5bac7b973e418623906c6384"><p class="textbody">なでこ頑張る！</p></a><p class="mq">なでこ頑張る！</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=TQH-ZCE-BNF"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5a8ad2763e4186793919e602"></div></a>
+						<span class="marginleft5 stockname">千石撫子（物語シリーズ ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">37,013</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="/en/playlist/detail.php?pk=CDJTWBVA3">...68 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-i5-j+o-30+7q"
+     data-ad-client="ca-pub-5394123364428126"
+     data-ad-slot="7705327600"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="/en/playlist/detail.php?pk=PMMNVX7AR">
+                              <img src="https://api.voistock.com/playlistImage/playlistImage.php?playlistId=5c6fbece3e4186652e6e43b4" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">花澤香菜・聴き比べ </h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 1,149,437 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 4 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 27 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents sadVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bbda4f93e41860b457c34e2"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bbda4f93e41860b457c34e2" id="voice5bbda4f93e41860b457c34e2" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5bbda4f93e41860b457c34e2"><p class="textbody">そっちの方がいつも通りって感じがするし</p></a><p class="mq">そっちの方がいつも通りって感じがするし</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=XGT-3GZ-DXT"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5c6f6e160e3bb90c1d887df8"></div></a>
+						<span class="marginleft5 stockname">結城美柑（To LOVEる -とらぶる- ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">32,563</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents cuteVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bbda4f93e41860b457c34e3"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bbda4f93e41860b457c34e3" id="voice5bbda4f93e41860b457c34e3" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5bbda4f93e41860b457c34e3"><p class="textbody">だけど、最後にこれぐらいはいいよね</p></a><p class="mq">だけど、最後にこれぐらいはいいよね</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=XGT-3GZ-DXT"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5c6f6e160e3bb90c1d887df8"></div></a>
+						<span class="marginleft5 stockname">結城美柑（To LOVEる -とらぶる- ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">32,340</span></i>
+                            <i class="fas fa-heart"><span class="favNum">1</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents sadVoice">
+						<div class="playicon text-left voiceplay" data-vid="5bbda4f93e41860b457c34e7"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5bbda4f93e41860b457c34e7" id="voice5bbda4f93e41860b457c34e7" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5bbda4f93e41860b457c34e7"><p class="textbody">一番落ち着くみたい</p></a><p class="mq">一番落ち着くみたい</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=XGT-3GZ-DXT"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5c6f6e160e3bb90c1d887df8"></div></a>
+						<span class="marginleft5 stockname">結城美柑（To LOVEる -とらぶる- ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">32,159</span></i>
+                            <i class="fas fa-heart"><span class="favNum">0</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="/en/playlist/detail.php?pk=PMMNVX7AR">...24 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-i5-j+o-30+7q"
+     data-ad-client="ca-pub-5394123364428126"
+     data-ad-slot="7705327600"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+				<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_left grid-item">
+	              <div class="x_panel">
+					  <div class="x_title datalist">
+						  <h2><i class="fa fa-list"></i> Playlists</h2>
+						   <button type="button" class="btn btn-xs btn-info pull-right btn-playlistsearch"><i class="fa fa-search"></i>検索</button>
+						<div class="clearfix"></div>
+					  </div>
+					
+	                  <div class="x_content">
+					<!-- pl -->
+					<div class="profile_details">
+                        <div class="profile_view">
+                          <div>
+                            <div class="col-md-12 col-sm-12 playlist-imgbox">
+								<a href="/en/playlist/detail.php?pk=4DTPYMJ8G">
+                              <img src="https://api.voistock.com/playlistImage/playlistImage.php?playlistId=5c8b38813e4186607879ac02" alt="" class="img-responsive playlist-image">
+							  <h2 class="profUserNickname text-center">菅野舜Playlists</h2>
+								</a>
+                              <ul class="list-unstyled">
+		                        <li><i class="fa fa-play user-profile-icon"></i> 293,756 Play count</li>
+		                        <li><i class="fa fa-heart user-profile-icon"></i> 67 Favorites</li>
+		                        <li><i class="fa fa-check user-profile-icon"></i> 10 Voice</li>
+		                        <li><i class="fa fa-globe user-profile-icon"></i> Public</li>
+								
+                              </ul>
+                            </div>
+                            <div class="col-md-12 col-sm-12 playlist-voicebox">
+                    <article class="media event voiceplate">
+                    <div class="voicePostContents sexyVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c867ce43e418616501f7962"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c867ce43e418616501f7962" id="voice5c867ce43e418616501f7962" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5c867ce43e418616501f7962"><p class="textbody"> <i class="fas fa-headphones-alt"></i> おはよう</p></a><p class="mq">おはよう</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=YNS-ZNZ-QJ2"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5c80d2c53e418658b9386f49"></div></a>
+						<span class="marginleft5 stockname">T.I.S（BACS ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						<img src='/en/img/googlespeach.png' class='googlespearch'><i class='fas fa-headphones-alt asmrIcon'></i>                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">74,229</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents peacefulVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c867cee3e418614186bff12"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c867cee3e418614186bff12" id="voice5c867cee3e418614186bff12" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5c867cee3e418614186bff12"><p class="textbody"> <i class="fas fa-headphones-alt"></i> おやすみ</p></a><p class="mq">おやすみ</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=YNS-ZNZ-QJ2"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5c80d2c53e418658b9386f49"></div></a>
+						<span class="marginleft5 stockname">T.I.S（BACS ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						<img src='/en/img/googlespeach.png' class='googlespearch'><i class='fas fa-headphones-alt asmrIcon'></i>                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">71,625</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+								                    <article class="media event voiceplate">
+                    <div class="voicePostContents peacefulVoice">
+						<div class="playicon text-left voiceplay" data-vid="5c867cf63e41860a9c3de553"><span class="far fa-play-circle fa-2x vicon"><audio src="https://voice.voistock.com/mp3play.php?id=5c867cf63e41860a9c3de553" id="voice5c867cf63e41860a9c3de553" preload="none"></audio></span></div>						<a class="bal-text textdisplay" href="/en/voicelist/voice.php?vid=5c867cf63e41860a9c3de553"><p class="textbody"> <i class="fas fa-headphones-alt"></i> ヤッホー</p></a><p class="mq">ヤッホー</p>
+																
+                    </div>
+                    <div class="voiceDetails voice-info-data">
+                        <a href="/userprof/index.php?uk=YNS-ZNZ-QJ2"><div class="usericon voiceicon"><img class="pull-left listicon" src="https://api.voistock.com/imgsample/image.php?userId=5c80d2c53e418658b9386f49"></div></a>
+						<span class="marginleft5 stockname">T.I.S（BACS ）</span>
+                    </div>
+                    <div class="voiceIndicator">
+						<img src='/en/img/googlespeach.png' class='googlespearch'><i class='fas fa-headphones-alt asmrIcon'></i>                        <span class="voicedetail-icon">
+                            <i class="fas fa-play"><span class="playNum">29,720</span></i>
+                            <i class="fas fa-heart"><span class="favNum">2</span></i>
+                        </span>
+                    </div>
+						
+                    </article>
+																																							<p class="right pull-right"><a href="/en/playlist/detail.php?pk=4DTPYMJ8G">...7 more voices</a></p>
+															                            </div>
+                          </div>
+                        </div>
+                      </div>
+					<!-- pl -->
+
+<article class="media event voiceplate">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-i5-j+o-30+7q"
+     data-ad-client="ca-pub-5394123364428126"
+     data-ad-slot="7705327600"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>				
+</article>					  
+
+					  </div>
+				</div>	
+			</div>
+
+			<div class=" col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-item">
+              <div class="x_panel">
+                <div class="x_title datalist">
+                  <h2><i class="fas fa-tags"></i> Voicetags</h2>
+                  <div class="clearfix"></div>
+                </div>
+                  <div class="row x_content row-eq-height tagdatas">
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="変身シーン">変身シーン</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="コロプラ">コロプラ</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Phew, glad there weren't any poisonous mushroom inside.">Phew, glad there weren't any poisonous mushroom inside.</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Ah, I'm feeling alright today. I'll take the chance to try and get some more done than usual.">Ah, I'm feeling alright today. I'll take the chance to try and get some more done than usual.</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Prinz">Prinz</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="少女">少女</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="A.I.Channel">A.I.Channel</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Jeanne d'Arc Alter Santa Lily">Jeanne d'Arc Alter Santa Lily</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="オクタヴィネル寮">オクタヴィネル寮</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Voice">Voice</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Minamoto no Tametomo">Minamoto no Tametomo</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="サーバント">サーバント</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="First Hassan">First Hassan</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="VoiceTitle Something to Share: Skill Names">VoiceTitle Something to Share: Skill Names</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="ディズニー ツイステッドワンダーランド">ディズニー ツイステッドワンダーランド</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Kayli Mills">Kayli Mills</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Azur Lane">Azur Lane</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="FGO">FGO</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="VoiceTitle ">VoiceTitle </button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="ツイステ">ツイステ</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="VoiceTitle Cyno's Hobbies">VoiceTitle Cyno's Hobbies</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="フェイト">フェイト</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="JustC-3">JustC-3</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="名言">名言</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Fate">Fate</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Pita pockets are travel-friendly and filling, so they're probably the food I eat the most. But if we're talking about more than just "filling," my favorite food would be... mmm, Fried Radish Balls, I think.">Pita pockets are travel-friendly and filling, so they're probably the food I eat the most. But if we're talking about more than just "filling," my favorite food would be... mmm, Fried Radish Balls, I think.</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="Ee, ee, wakarimashita wa. Anata ni wa hontou no koto wo uchiakemashou. Sabaku to urin no ryokou pakku wo sorezore utta baai, ikko atari ni-hyaku gojuu-man Mora ni narimasu no. Demo, ikko kattara mou ikko mo tada ni naru to omou to, totemo otoku-na ki ga shimasen?">Ee, ee, wakarimashita wa. Anata ni wa hontou no koto wo uchiakemashou. Sabaku to urin no ryokou pakku wo sorezore utta baai, ikko atari ni-hyaku gojuu-man Mora ni narimasu no. Demo, ikko kattara mou ikko mo tada ni naru to omou to, totemo otoku-na ki ga shimasen?</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="サーヴァント">サーヴァント</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="1年生">1年生</button>
+					<button type="button" class="btn btn-round btn-default tagbtn" data-tagbtn="物語シリーズ">物語シリーズ</button>
+
+                  </div>
+				  <div class="ad-area">
+<article class="media">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-i5-j+o-30+7q"
+     data-ad-client="ca-pub-5394123364428126"
+     data-ad-slot="7705327600"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</article>
+                  </div>
+				  
+              </div>
+            </div>
+
+			<div class="row dlapp">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 buttons-box grid-item">
+					<div class="x_panel">
+						<div class="x_content">
+							<div class="row">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 appicon-cover"><img src="voicelist/img/vt-download.png" class="img-responsive appdlicons"></div>
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 appicon-cover"><a href="https://itunes.apple.com/jp/app/id1410177477?l=ja&ls=1&mt=8" target="_blank"><img src="/en/img/en_appstore.png" class="img-responsive appdlicons"></a></div>
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 appicon-cover"><a href="https://play.google.com/store/apps/details?id=com.voistock.stamp" target="_blank"><img src="/en/img/en_googleplay.png" class="img-responsive appdlicons"></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+</div>
+	<!-- footer content -->
+        <footer>
+          <div class="pull-right">
+             &copy;VoiStock PTE.LTD. -Stock Voices,Change the World.-
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+	  
+    <!-- jQuery -->
+    <script src="/en/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/en/vendors/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/en/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="/en/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/en/vendors/nprogress/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="/en/vendors/iCheck/icheck.min.js"></script>
+    <!-- PNotify -->
+    <script src="/en/vendors/pnotify/dist/pnotify.js"></script>
+    <script src="/en/vendors/pnotify/dist/pnotify.buttons.js"></script>
+    <script src="/en/vendors/pnotify/dist/pnotify.nonblock.js"></script>	
+	
+    <!-- Datatables -->
+    <script src="/en/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/en/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="/en/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="/en/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="/en/vendors/datatables.net-buttons/js/buttons.flash.js"></script>
+    <script src="/en/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="/en/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="/en/vendors/datatables.net-buttons/js/buttons.colVis.js"></script>
+    <script src="/en/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="/en/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="/en/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/en/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="/en/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="/en/vendors/jszip/dist/jszip.min.js"></script>
+    <script src="/en/vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="/en/vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="/en/js/jquery.imgFitter.js"></script>
+	<script src="/en/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="/en/vendors/switchery/dist/switchery.min.js"></script>
+	<script src="/en/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+
+    <script src="/en/upload/js/vendor/jquery-tmpl/jquery.tmpl.min.js"></script>
+    <script src="/en/js/jquery.cookie.js"></script>
+    <script src="/en/js/howler/howler.min.js"></script>
+	
+    <script src="/en/js/jsSHA/src/sha.js"></script>
+    <script src="/en/js/apiAuth.js"></script>
+    <script src="/en/js/playlist_logout.js"></script>
+    <script src="/en/js/copyThisUrl.js?2023041902"></script>
+
+
+    <script src="/en/js/topvoicesearch.js"></script>
+    <script src="/en/js/langsetting.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="/build/js/custom.js"></script>
+	<script src="/en/js/slick/slick.min.js"></script>
+<script src="/en/js/imagesloaded.pkgd.min.js"></script>
+<script src="/en/js/masonry.pkgd.min.js"></script>
+<script src="upload/js/vendor/jquery.balloon.js/jquery.balloon.min.js"></script>
+<script src="js/hMarquee.min.js"></script>
+<script src="js/jquery.marquee.js"></script>
+<script src="js/voiceplay.js"></script>
+<script src="js/top.js"></script>
+<script src="js/icondescription.js"></script>
+	
+	<!-- Loginモーダル -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">Please Login</h4>
+			</div>
+	        <div class="modal-body">
+				<span id="loginModal-body-area">
+					<div class="text-center center-block">This function is usable after login<br>Download can not be used from iOS devices</div>
+					<div class="text-center center-block login-btn"> <button type="button" class="btn btn-info" onclick="window.location.href='/login/'"><i class="glyphicon glyphicon-log-in listicon"></i> Stock entry/Login </button> </div>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Loginモーダル -->
+
+<!-- iOSモーダル -->
+<div class="modal fade" id="iosModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">Can not download from iOS devices</h4>
+			</div>
+	        <div class="modal-body">
+				<span id="loginModal-body-area">
+					<div class="text-center center-block">Can not use Download from iOS devices</div>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Loginモーダル -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107915636-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107915636-3');
+</script>
+
+<!-- イベントVoiceモーダル -->
+<div class="modal fade" id="eventVoiceModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">Event Voices</h4>
+			</div>
+	        <div class="modal-body">
+				<span id="eventVoiceModal-body-area">
+					<div class="text-center center-block">You can use this voice upon login and code input<br>
+						<br>
+						<button type="button" class="btn btn-warning" onclick="window.location.href='/en/code'">To code input page<br>(Through login page)</button>
+					</div>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /イベントモーダル -->
+<p class='copysrc'><span class='thisUrl'>https://www.voistock.com/en/</span></p>
+
+<p class='copysrc'><span class='thisCode'></span></p>
+
+
+<!-- LoginVoiceモーダル -->
+<div class="modal fade" id="loginVoiceModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">You can listen to this voice upon login</h4>
+			</div>
+	        <div class="modal-body">
+				<span id="eventVoiceModal-body-area">
+					<div class="text-center center-block">You can use this voice upon login<br>
+						<br>
+						<button type="button" class="btn btn-warning" onclick="window.location.href='/en/login'">To login page</button>
+					</div>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /LoginVoiceモーダル -->
+
+
+	</body>
+</html>

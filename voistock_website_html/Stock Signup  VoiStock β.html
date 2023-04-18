@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/en/favicon.ico">
+
+<meta name="description" content="Signup Page of Stock. You can make playlists, download voices, and more by signing up">
+<meta property="og:description" content="Signup Page of Stock. You can make playlists, download voices, and more by signing up">
+<meta property="og:title" content="Stock Signup | VoiStock β">
+<meta name="keywords" content="Voice,声,Voice Actor,Anime,Stock,Playlists,VoiStock,VoiStamp,Voiceデータベース,VoiStock,Games,アイドル,キャラ,録音,Animeキャラ,音声,Anime名言,中二病,まとめ,anime,quotes,japanese,phrases,CV,character,voice,playlist,actress,actor,words,">
+<meta name="author" content="VoiStock">
+<meta name="copyright" content="VoiStock">
+<meta property="og:site_name" content="VoiStock">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.voistock.com/en/login/adduser.php">
+<meta property="og:image" content="https://www.voistock.com/en/images/logo-sns.png">
+<meta property="og:locale" content="ja_JP">
+<meta property="fb:app_id" content="177623579685517">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@VoiStockPteLtd">
+    <title>Stock Signup | VoiStock β</title>
+
+    <!-- Bootstrap -->
+    <link href="/en/vendors/bootstrap/dist/css/bootstrap.min.css?2023041902" rel="stylesheet">
+    <!-- Font Awesome -->
+	<link href="/en/vendors/font-awesome/css/all.min.css" rel="stylesheet">
+	<link href="/en/vendors/_font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="/en/vendors/nprogress/nprogress.css" rel="stylesheet">
+	<!-- PNotify -->
+	<link href="/en/vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+	<link href="/en/vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+	<link href="/en/vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">	
+	
+    <!-- iCheck -->
+    <link href="/en/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="/en/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="/en/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="/en/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="/en/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="/en/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <link href="/en/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+
+    <!-- emotion -->
+    <link href="/en/css/emotion.css?2023041902" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="/en/build/css/custom.css?2023041902Apr" rel="stylesheet">
+    <link href="/en/css/all.css?2023041902" rel="stylesheet">
+	
+<link href="css/login.css" rel="stylesheet">	
+	<script type="javascript">
+		loginsuccess="";
+	</script>
+	
+  </head>
+  <body class="nav-sm">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+				<a href="/en/" class="site_title"><img src="/en/images/logomark.png" width="45px"> <span>VoiStock β</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <br />            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>Functions</h3>
+                <ul class="nav side-menu">
+                  <li><a href="/en/"><i class="fa fa-asterisk"></i> Top Page </a></li>
+                  <li><a href="/en/voicelist/"><i class="fa fa-microphone"></i> Public Voice List </a></li>
+				  
+                  <li><a href="/en/playlist/search.php"><i class="fa fa-list"></i>Search for Playlists</a></li>
+				  
+                  <li><a href="/en/stocksearch/"><i class="fa fa-search"></i> Search for Stocks </a></li>
+                  <li><a href="/en/login/"><i class="glyphicon glyphicon-log-in listicon"></i> Stock Login </a></li>
+                  <li><a href="/en/code/"><i class="fa fa-edit"></i> Code Input </a></li>
+                </ul>
+              </div>
+				
+				
+				
+              <div class="menu_section">
+                <h3>Etc.</h3>
+                <ul class="nav side-menu">
+                  <li><a href="/en/information/"><i class="fa fa-info-circle"></i> Notice </a></li>
+                  <li><a><i class="fas fa-life-ring"></i> Support <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><!--<a href="/support/howto.php">--><a href="javascript:void(0)">User Guide <span class="label label-success pull-right">Coming Soon</span></a></li>
+                      <li><!--<a href="/support/faq.php">--><a href="javascript:void(0)">FAQ <span class="label label-success pull-right">Coming Soon</span></a></li>
+                      <li><a href="/en/support/inquiry/">Contact us</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="/en/privacy/"><i class="fas fa-flag"></i> Privacy Policy </a></li>
+                  <li><a href="/en/terms/"><i class="fas fa-check"></i> Terms of Service </a></li>
+                  <li><a href="/en/about/" target="_blank"><i class="fa fa-comment"></i> About us </a></li>
+                </ul>
+              </div>
+				
+				
+              <div class="menu_section">
+                <h3>Share</h3>
+                <ul class="nav side-menu snsiconmenu">
+					<li class="text-center"><a href="javascript:window.open('https://www.facebook.com/sharer.php?u='+encodeURIComponent(location.href),'sharewindow','width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!');"><button type="button" class="btn btn-default snsbtn"  style="background: #0D65D3;"><i class="fab fa-facebook snsicon"></i></button></a></li>
+					
+					
+					<li class="text-center"><a href="javascript:window.open('https://twitter.com/share?text='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(location.href),'sharewindow','width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!');"><button type="button" class="btn btn-default snsbtn" style="background: #1DA1F2;"><i class="fab fa-twitter snsicon"></i></button></a></li>
+					<li class="text-center"><a href="javascript:window.open('https://line.me/R/msg/text/?'+encodeURIComponent(document.title)+'%20'+encodeURIComponent(location.href),'sharewindow','width=550, height=520, personalbar=0, toolbar=0, scrollbars=1, resizable=!');"><button type="button" class="btn btn-default snsbtn" style="background: #00B900;"><img src="/en/img/line-logo.png" class="line-icon-img snsicon"></button></a></li>
+					<li class="text-center"><a><button type="button" class="btn btn-default copyurl snsbtn" id="" ><i class="far fa-copy snsicon"></i></button></a></li>
+                </ul>
+              </div>
+				
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Login" href="/en/login">
+                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div><script>
+	pagelang='en';
+</script>
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+				
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="langbox dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+					  <!--言語設定-->
+                                          言語設定
+                    <span class="fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu dropdown-langmenu pull-right">
+                    <li><a href="/ja/login/adduser.php"> 日本語</a></li>
+                    <li><a href="/en/login/adduser.php"><i class="fas fa-check"></i> English</a></li>
+					<li class="divider"></li>
+                    <li>
+                            VoiceText Translate
+                            <span class="pull-right voicetext-switch">
+                                    <label><span class="translate-status">OFF</span><input type="checkbox" class="js-switch translate-switch" /></label>
+                            </span>
+                    </li>
+                  </ul>
+					
+                </li>
+				  
+				  
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+					  <img src="/en/images/user.png" alt="">
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="/en/login/"><i class="glyphicon glyphicon-log-in pull-right"></i> Login</a></li>
+                    <li><a href="/en/login/adduser.php"><i class="fas fa-pencil-alt pull-right"></i> Sign up</a></li>
+                  </ul>					
+                </li>
+				
+
+				
+                <li class="">
+                  <div class="input-group top_search">
+                    <input type="text" class="form-control menusearch-word" placeholder="Search for Voices...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default menusearch" type="button">検索</button>
+                    </span>
+                  </div>
+                </li>
+				
+                <li class="">
+                    <div class="input-group upload-icon-area">
+                        <a href="/en/upload/"><img src="/en/img/stock_en.png" class="img-responsive upload-icon" alt="voice upload"></a>
+                    </div>
+                </li>
+				
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+		<div class="clearfix"></div>
+		
+        <div class="right_col" role="main">
+            <div class="page-title">
+              <div class="title_left">
+				<h2><i class="far fa-address-card"></i> Stock Signup</h2>
+              </div>
+            </div>
+			
+			<div class="x_panel">
+				<div class="x_content">
+					<div class="useradd_info">
+						<section class="login_content">
+							<p style="color:red;">You can listen to restricted voices with code after you complete Stock Signup (User Signup)</p>
+							<p>You can download, favorite, or make playlists by signing up</p>
+							<p class="info-small">※Same account for VoiStock and VoiStamp</p>
+						</section>
+					</div>
+					<div class="text-center">
+						You can sign up with your Facebook account here<br>
+						<button type="button" class="btn btn-primary btn-lg fblogin" onclick="fbLogin('https://www.facebook.com/v3.1/dialog/oauth?client_id=177623579685517&state=c7f1e7a16924f2e1cea48a6eb48ed1bb&response_type=code&sdk=php-sdk-5.6.3&redirect_uri=https%3A%2F%2Fwww.voistock.com%2Flogin%2Ffbcallback.php&scope=email');"><i class="fa fa-facebook-square fa-2x"></i> Signup by Facebook account</button>
+					</div>
+					<hr>
+					<div class="text-center">
+						You can sign up with your email address here<br>
+						<button type="button" class="btn btn-success btn-lg mailuseradd" onclick="window.location.href='/addMailUser/'"><i class="fas fa-mail-bulk fa-2x"></i> Signup by email address</button>
+					</div>
+                                        <hr>
+                                        <div class="text-center">
+                                            <span style="color:red;">Go to Login page if you already signed up</span><br><br>
+						<button type="button" class="btn btn-primary" onclick="window.location.href='index.php'"><i class="far fa-address-card"></i> Go to Login page!</button></p>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+
+
+</div>
+	<!-- footer content -->
+        <footer>
+          <div class="pull-right">
+             &copy;VoiStock PTE.LTD. -Stock Voices,Change the World.-
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+	  
+    <!-- jQuery -->
+    <script src="/en/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/en/vendors/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/en/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="/en/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/en/vendors/nprogress/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="/en/vendors/iCheck/icheck.min.js"></script>
+    <!-- PNotify -->
+    <script src="/en/vendors/pnotify/dist/pnotify.js"></script>
+    <script src="/en/vendors/pnotify/dist/pnotify.buttons.js"></script>
+    <script src="/en/vendors/pnotify/dist/pnotify.nonblock.js"></script>	
+	
+    <!-- Datatables -->
+    <script src="/en/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/en/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="/en/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="/en/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="/en/vendors/datatables.net-buttons/js/buttons.flash.js"></script>
+    <script src="/en/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="/en/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="/en/vendors/datatables.net-buttons/js/buttons.colVis.js"></script>
+    <script src="/en/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="/en/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="/en/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/en/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="/en/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="/en/vendors/jszip/dist/jszip.min.js"></script>
+    <script src="/en/vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="/en/vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="/en/js/jquery.imgFitter.js"></script>
+	<script src="/en/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="/en/vendors/switchery/dist/switchery.min.js"></script>
+	<script src="/en/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+
+    <script src="/en/upload/js/vendor/jquery-tmpl/jquery.tmpl.min.js"></script>
+    <script src="/en/js/jquery.cookie.js"></script>
+    <script src="/en/js/howler/howler.min.js"></script>
+	
+    <script src="/en/js/jsSHA/src/sha.js"></script>
+    <script src="/en/js/apiAuth.js"></script>
+    <script src="/en/js/playlist_logout.js"></script>
+    <script src="/en/js/copyThisUrl.js?2023041902"></script>
+
+
+    <script src="/en/js/topvoicesearch.js"></script>
+    <script src="/en/js/langsetting.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="/build/js/custom.js"></script>
+	<script src="/js/fblogin.js"></script>
+<script src="/js/jsSHA/src/sha.js"></script>
+<script src="/js/apiAuth.js"></script>
+<script src="/js/maillogin.js"></script>
+<script src="/js/mailReminder.js"></script>
+	
+	<!-- Loginモーダル -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">Please Login</h4>
+			</div>
+	        <div class="modal-body">
+				<span id="loginModal-body-area">
+					<div class="text-center center-block">This function is usable after login<br>Download can not be used from iOS devices</div>
+					<div class="text-center center-block login-btn"> <button type="button" class="btn btn-info" onclick="window.location.href='/login/'"><i class="glyphicon glyphicon-log-in listicon"></i> Stock entry/Login </button> </div>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Loginモーダル -->
+
+<!-- iOSモーダル -->
+<div class="modal fade" id="iosModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">Can not download from iOS devices</h4>
+			</div>
+	        <div class="modal-body">
+				<span id="loginModal-body-area">
+					<div class="text-center center-block">Can not use Download from iOS devices</div>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Loginモーダル -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107915636-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107915636-3');
+</script>
+
+<!-- イベントVoiceモーダル -->
+<div class="modal fade" id="eventVoiceModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">Event Voices</h4>
+			</div>
+	        <div class="modal-body">
+				<span id="eventVoiceModal-body-area">
+					<div class="text-center center-block">You can use this voice upon login and code input<br>
+						<br>
+						<button type="button" class="btn btn-warning" onclick="window.location.href='/en/code'">To code input page<br>(Through login page)</button>
+					</div>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /イベントモーダル -->
+<p class='copysrc'><span class='thisUrl'>https://www.voistock.com/en/login/adduser.php</span></p>
+
+<p class='copysrc'><span class='thisCode'></span></p>
+
+
+<!-- LoginVoiceモーダル -->
+<div class="modal fade" id="loginVoiceModal" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">You can listen to this voice upon login</h4>
+			</div>
+	        <div class="modal-body">
+				<span id="eventVoiceModal-body-area">
+					<div class="text-center center-block">You can use this voice upon login<br>
+						<br>
+						<button type="button" class="btn btn-warning" onclick="window.location.href='/en/login'">To login page</button>
+					</div>
+				</span>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /LoginVoiceモーダル -->
+
+
+	</body>
+</html>
